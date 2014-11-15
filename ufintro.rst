@@ -12,6 +12,6 @@ What is a scenario, and what is scenario planning?
 
 Scenario Planning: a brief history
 __________________________________
-..image:: images/SPHistory.svg
+.. image:: graphics/SPHistory.svg
 
 

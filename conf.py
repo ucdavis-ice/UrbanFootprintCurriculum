@@ -46,7 +46,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'ufdocs'
+project = u'UrbanFootprint Curriculum'
 copyright = u'2014, Nathaniel Roth'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -106,7 +106,14 @@ html_theme = 'default'
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
+html_theme_options = {
+"sidebarbgcolor":"#003366",
+"sidebartextcolor":"#EEEEEE",
+"sidebarlinkcolor":"#FFFFCC",
+"headtextcolor":"#002266",
+"relbarbgcolor":"#001133",
+"footerbgcolor":"#226699"
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
