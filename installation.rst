@@ -53,6 +53,23 @@ SSH Key
 Follow Amazon's instructions for creating a SSH key pair.
 
 http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
+
+AWS Security Profile
+++++++++++++++++++++
+
+
+Create Instance
++++++++++++++++
+
+Ubuntu 14.04LTS 64 Bit
+
+m3.2xlarge
+
+No extra storage (it could be added later). 
+
+Select the security profile set up in the previous step.
+
+Initialize the instance.
  
 
 Installation
