@@ -29,7 +29,31 @@ ________________________
 You will need to create a free bitbucket account at http://bitbucket.org
 After creating the account you will need to request access to the repository from Evan Babb.
 
+Using Amazon
+____________
 
+AWS Account
++++++++++++
+Set up an Amazon Web Service account. This will require a credit card to cover costs.
+http://aws.amazon.com/
+
+
+
+Install PuTTY (Windows)
+++++++++++++++++++++++++
+
+http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+
+PuTTY is a commonly used set of utilities for remote connection to Linux and Ubuntu computers from windows.
+I recommend using the Windows installer that installs "everything except PuTTYtel." As of this writing the version is PuTTY v0.63. 
+
+SSH Key
++++++++
+
+Follow Amazon's instructions for creating a SSH key pair.
+
+http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
+ 
 
 Installation
 ------------

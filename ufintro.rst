@@ -14,5 +14,11 @@ Scenario Planning: a brief history
 __________________________________
 .. image:: graphics/SPHistory.svg
 
-Work in progress...
--------------------
+
+Communication
+_____________
+.. image:: graphics/Communicate1.jpg 
+.. image:: graphics/Communicate2.jpg
+.. image:: graphics/Communicate3.jpg 
+.. image:: graphics/Communicate4.jpg
+
