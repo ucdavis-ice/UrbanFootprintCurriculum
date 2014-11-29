@@ -13,6 +13,7 @@ Contents:
 
    ufintro
    installation
+   editing
 
 
 
