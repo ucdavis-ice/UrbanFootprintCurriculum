@@ -14,11 +14,11 @@ Goals
 Map Structure
 -------------
 
-Image here (Base + Change)
+.. image:: graphics/MapStructure1.svg
 
 UrbanFootprint builds a scenario by adding the “change” or “increment” that you’ve painted on top of a base conditions dataset. The combination of the two produces what is known as the “End state.” The “End State” represents what will be on the ground in the future (at what ever time you’re targeting). 
 
-Image here (Base + Change = End State)
+.. image:: graphics/MapStructure2.svg
 
 It is important to note that this isn’t just a simple addition or replacement of the base condition with the change map. UrbanFootprint implements rules that play several roles to control how overlaps are handled.
 
@@ -32,7 +32,7 @@ How Place Types Work
 Buildings
 _________
 
-Image here (building overlaps)
+.. image:: graphics/Buildings.svg
 
 We know specific details about the buildings
 * Square footage
@@ -56,7 +56,7 @@ Discussion
 Building Types
 ______________
 
-Image here (building group)
+.. image:: graphics/BuildingType.svg
 
 We can group similar buildings together to create a “Building Type”
 
@@ -79,7 +79,7 @@ Discussion
 Place Type
 __________
 
-Image Here (grouped building types).
+.. image:: graphics/PlaceTypes.svg.
 
 A “Place Type” is a mixture of building types.
 
@@ -249,7 +249,7 @@ ________
 
 Image here
 
-Scenario Managment
+Scenario Management
 __________________
 
 Image here
@@ -274,50 +274,142 @@ _____________________________
 
 Image here
 
-Scenario Mangment
+Scenario Mangement
 -----------------
 
-Content here
+* Selecting a Geographic Area
+* Selecting a scenario
+* Create a scenario
+* Delete a scenario
+* Edit scenario details
+* Review current scenario populations and employment
+
+Image here
+
+* Create a New Scenario
+ 
+ * Click on the New Scenario button
+* Copy a Scenario
+
+ * Click on the green icon next to a scenario name.
+* Delete a Scenario
+ 
+ * Click on the red icon next to the scenario
+* Edit Scenario Details
+
+ * Double click and edit text
+ * Click Save
+
+
 
 
 Charts
 ------
 
-Content here
+Image Here
+
+* Provide immediate feedback on the Scenario
+* By Increment and End State
+* Population, Dwelling Unit, and Employment Totals
+* Dwelling Units by Type
+* Employment by Type
 
 
 Layer Management
 ----------------
 
-Content here
+Image here
+
+* Import Layer
+* Layer ordering
+* No Symbology Editing
+* Export Layers to File Geodatabase
+
 
 Basic Layer Management
 ______________________
 
-Content here
+* Turning layers on and off
+
+ * Click on the check box to the left of the layer name
+
+ * Active layer
+ 
+ * Is always highlighted in blue
+
 
 Layer Ordering
 ______________
 
-Content here
+* Open by clicking on the sideways arrow (highlighted in picture)
+* Broken into two categories:
+
+ * Background
+ * Foreground
+
+* Drag the layers into the order you want (within the background/foreground groups)
+
 
 Advanced Layer Management
 _________________________
 
-Content here
+Image here
+
+Access the Manage Layers Window by clicking on the down arrow in the layer manager
+
+The same arrow will also give you the option to export the active layer to an ESRI file geodatabase for downloading.
+
 
 Note:
 You can also export layers to an ESRI File Geodatabase for use in ArcGIS. 
 
-Manage Layere Window
-____________________
+Managing Layers
+_______________
 
-Content here
+* Every scenario has a primary layer that provides the spatial structure for the scenario.
+* That will frequently be a parcel layer
+* This primary or parcel layer is the minimum spatial unit that UrbanFootprint uses.
+* Other values are aggregated up from that minimum unit.
 
+Layer Scope, Behavior, and Tags
+_______________________________
 
+* Scope: Does this layer apply to just this scenario or to the entire geographic area
+* Assigned Behavior: Named roles that the layer can play in UrbanFootprint. At present all roles except “Environmental Constraint” are placeholders for future functionality.
+* Tags: Are not fully implemented but will allow for searching for data types within UrbanFootprint
 
+Environmental Constraints
+_________________________
 
+* Reduce the developable space in parcels that they have a relationship with. 
+* Each layer has a priority and a percentage
+* The priority determines which layer takes precedence.
+* The percentage determines how much the developable space is reduced.
 
+Polygon Relationships
+_____________________
+
+Every layer other than a background layer has a relationship to the primary layer
+These relationships can be geographic or attribute table (primary id)
+Geographic: (primary to layer)
+Polygon to Polygon (many to many)
+Centroid to Polygon (one to many)
+Polygon to Centroid (many to one)
+Attribute Table: One to one
+
+Polygon Relationships Example
+++++++++++++++++++++++
+Basic polygons:
+.. image:: graphics/PolyRelationships1.svg
+
+Polygon to Polygon
+.. image:: graphics/PolyToPolyRelationship.svg
+
+Centroid to Polygon
+.. image:: graphics/CentroidToPolyRelationship.svg
+
+Polygon to Centroid
+.. image:: graphics/PolyToCentroidRelationship.svg
 
 
 
