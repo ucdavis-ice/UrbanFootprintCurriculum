@@ -411,5 +411,183 @@ Centroid to Polygon
 Polygon to Centroid
 .. image:: graphics/PolyToCentroidRelationship.svg
 
+Import Layer
+____________
+
+Image here
+
+#. Click on “Add New Layer”
+#. Choose a zipped shapefile
+#. Set Spatial Reference (SRID): (The EPSG code specifies the projection used by the dataset.
+
+ #. SRID Lookup: http://spatialreference.org/ 
+ #. California Albers: 3310
+ #. Web Mercator (WGS84): 3857
+
+#. Set the Behavior
+#. Set Intersection Type
+#. Specify the Source ID Column
+#. Save Changes
+
+Query Based Selection
+_____________________
+
+Image Here
+
+A slightly more advanced operation that requires basic familiarity with SQL and a little understanding of the database.
+
+The operation selects features in the Active Layer based on a query that you provide.
+
+Query interface
+Image here
+
+**Detailed Examples**
+#. Define an area using the polygon selection tool.
+#. Open the query tool, note that it’s copied in the area defined by your box
+#. Where: acres_gross > 5
+
+Editing
+_______
+
+**Hand Selection (Painting)**
+Manual editing by selecting parcels using one of the selection tools.
+
+* Point (image)
+* Line (image)
+* Polygon (image)
+
+
+Select the tool
+
+* Box (drag and hold)
+* Polygon (click to draw the shape, double click to finish)
+
+Draw the area you want to include in your selection
+
+Any parcel that touches the shape will be selected
+
+
+
+**Query Based**
+* Select parcels based on a query
+* Useful for large area edits or applying changes to a large number of parcels that satisfy a conditon.
+
+#. Build your query
+
+#. Apply the query
+
+
+Developable Space
+_________________
+
+Image here
+
+* How much space in each parcel is actually developable?
+* Based on existing construction and environmental constraints.
+* Displayed as quantiles. Green will acept the most development, red the least
+
+
+Scenario Builder
+________________
+
+Image here
+
+* Development Pct.
+* Density Pct.
+* Gross/Net Pct. 
+* Clear Base Condition
+* Redevelopment Flag
+* Apply
+* Undo
+* Redo
+* Revert
+
+Development Percent and Density Percent
++++++++++++++++++++++++++++++++++++++++
+
+.. image:: graphics/DevPct_DensPct.svg
+
+Dev. Pct.:
+
+  The percentage of the parcel land area to receive the place type
+  50% means that 50% of the available land area will have the place type applied
+
+  Density Pct.:
+
+  The percentage of the place type densities to apply. 
+  80% means that a place type with an average density of 10 du/acre will be applied having 8 du/acre
+
+Gross/Net Percentage
+++++++++++++++++++++
+
+.. image:: graphics/GrossNetPct.svg
+
+* Allows assignment of a portion of the space to “No Use”
+* This is used to reserve space for other uses such as drainage, parks, or other infrastructure. 
+* This works on the developable percentage.
+* If Dev. Pct is 90% and Gross Net is 90% then 9% would be set aside as “No Use”
+
+Clear Base Condition and Redevelopment Flag
++++++++++++++++++++++++++++++++++++++++++++
+
+Clear Base Condition
+
+  If selected this removes any prior place type from the parcel.
+  If this is not selected, new place types are applied only to the developable portion of the parcel’s area
+  
+Redevelopment Flag
+
+  Manually flag a parcel as having been redeveloped.
+
+Applying Land Use
++++++++++++++++++
+
+Images
+
+Applying a land use involves combining the last few points that were presented.
+#. Activate the End State layer
+#. Select the Parcels
+#. Select the Place Type
+#. Adjust Settings
+
+ #. Dev, Density, Gross/net
+ #. Clear Base Condition
+ #. Redevelopment Flag
+
+#. Apply Place Type
+
+Select Parcels by hand or query
+
+Select the Place Type
+
+* Use the Scenario Builder
+* It slides out from the right side of the screen under "Analysis"
+
+Specify Settings for the Place Type
+
+* Development percentage, Density percentage, Gross/Net percentage
+* Clear Base Condition
+
+ * Do you want to clear the existing land (redevelopment) or not (infill).
+
+ * Redevelopment Flag to notify users that redevelopment was applied.
+ 
+Analysis
+--------
+
+* Some of these tools may take a long time to run.
+* They aren’t intended to be run after every change.
+* Run at “break points” when you are looking for an update on what the effects of your edits have been on the scenario’s performance
+
+Exercise
+--------
+
+**Create your own scenario**
+
+* SACOG’s Scenario B (Sutter County):
+ *. Add ~14,000 Population
+ *. Add ~5,500 Dwelling Units
+ *. Add ~2,000 Jobs
+
 
 
