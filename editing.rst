@@ -79,7 +79,7 @@ Discussion
 Place Type
 __________
 
-.. image:: graphics/PlaceTypes.svg.
+.. image:: graphics/PlaceTypes.svg
 
 A “Place Type” is a mixture of building types.
 
@@ -250,7 +250,7 @@ ________
 Image here
 
 Scenario Management
-__________________
+___________________
 
 Image here
 
@@ -275,7 +275,7 @@ _____________________________
 Image here
 
 Scenario Mangement
------------------
+------------------
 
 * Selecting a Geographic Area
 * Selecting a scenario
@@ -289,12 +289,15 @@ Image here
 * Create a New Scenario
  
  * Click on the New Scenario button
+
 * Copy a Scenario
 
  * Click on the green icon next to a scenario name.
+
 * Delete a Scenario
  
  * Click on the red icon next to the scenario
+
 * Edit Scenario Details
 
  * Double click and edit text
@@ -398,17 +401,31 @@ Polygon to Centroid (many to one)
 Attribute Table: One to one
 
 Polygon Relationships Example
-++++++++++++++++++++++
-Basic polygons:
++++++++++++++++++++++++++++++
+**Basic polygons:** This is the starting point. We have the grid of blue polygons (possibly representing parcels). We'll call this one our primary layer for the example. We also have another polygon (the orange circle) that overlaps a portion of the area. This circle might represent an environmental constraint, but we'll call it the polygon 2 for simplicity.
+
+As used here a "relationship" between a polygon in the primary layer and a polygon in another layer means that the other layer can be used to influence what can be done with the polygon in the primary layer. 
+
+For example, an environmental constraint impacts the developablity of all of the polygons in the primary layer that it has a relationship with.
+
 .. image:: graphics/PolyRelationships1.svg
 
-Polygon to Polygon
+**Polygon to Polygon:**
+
+In a polygon to polygon relationship polygon 2 has a relationship with every polygon in the primary layer that it touches. Represented in the graphic by the salmon color.
+
 .. image:: graphics/PolyToPolyRelationship.svg
 
-Centroid to Polygon
+**Centroid to Polygon:**
+
+In a centroid to polygon relationship, the polygon in the primary layer that contains the centroid (polygon 2's geographic center) of polygon 2 has a relationship with polygon 2. The salmon colored polygon in the graphic demonstrates how the center of circle (polygon 2) falls in only the single polygon in the primary layer. 
+
 .. image:: graphics/CentroidToPolyRelationship.svg
 
-Polygon to Centroid
+**Polygon to Centroid**
+
+In a polygon to centroid relationship, all of the polygons from the primary layer who's centroids fall inside of polygon 2 have a relationship with polygon 2. Note that in the image below, it captures all but the four corner blue polygons.
+
 .. image:: graphics/PolyToCentroidRelationship.svg
 
 Import Layer
@@ -507,15 +524,15 @@ Development Percent and Density Percent
 
 .. image:: graphics/DevPct_DensPct.svg
 
-Dev. Pct.:
+Development Pct.:
 
-  The percentage of the parcel land area to receive the place type
-  50% means that 50% of the available land area will have the place type applied
+  The percentage of the parcel land area to receive the place type.
+  50% means that 50% of the available land area will have the place type applied to it. In the graphic half of the parcel has development an the other half does not after applying the place type.
 
-  Density Pct.:
+Density Pct.:
 
   The percentage of the place type densities to apply. 
-  80% means that a place type with an average density of 10 du/acre will be applied having 8 du/acre
+  80% means that a place type with an average density of 10 du/acre will be applied having 8 du/acre. Note in the graphic the reduced intensity of the right parcel when compared to the left one.
 
 Gross/Net Percentage
 ++++++++++++++++++++
@@ -524,8 +541,13 @@ Gross/Net Percentage
 
 * Allows assignment of a portion of the space to “No Use”
 * This is used to reserve space for other uses such as drainage, parks, or other infrastructure. 
-* This works on the developable percentage.
-* If Dev. Pct is 90% and Gross Net is 90% then 9% would be set aside as “No Use”
+* This is applied to the developable percentage.
+* For Example: If Dev. Pct is 90% and Gross Net is 90% then 9% of the parcel would be set aside as “No Use.”
+
+ * Assume that we've got a 100 acre parcel
+ * Developable space = (100 acres)*90% = 90 acres
+ * No Use space percentage = 100%-90% = 10%
+ * No Use space = (90 acres) * 10% = 9 acres
 
 Clear Base Condition and Redevelopment Flag
 +++++++++++++++++++++++++++++++++++++++++++
@@ -585,9 +607,10 @@ Exercise
 **Create your own scenario**
 
 * SACOG’s Scenario B (Sutter County):
- *. Add ~14,000 Population
- *. Add ~5,500 Dwelling Units
- *. Add ~2,000 Jobs
+
+ * Add ~14,000 Population
+ * Add ~5,500 Dwelling Units
+ * Add ~2,000 Jobs
 
 
 
