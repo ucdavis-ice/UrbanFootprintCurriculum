@@ -223,12 +223,12 @@ This means that it can be installed, used, and customized without licensing fees
 A Tour of UrbanFootprint
 ________________________
 
-Image here
+.. image:: graphics/BaseCase.png
 
 Scenario Management
 +++++++++++++++++++
 
-Image here
+.. image:: graphics/ScenarioManagement.png
 
 * Switching between scenarios and the base condition
 * Quick summary of scenario population, dwelling units, and employment
@@ -237,7 +237,7 @@ Image here
 Layer Management
 ++++++++++++++++
 
-Image here
+.. image:: graphics/LayerManagment1.png
 
 * Turning layers on and off within your display.
 * Changing layer display options
@@ -246,14 +246,14 @@ Image here
 Charts
 ++++++
 
-Image here
+.. image:: graphics/Charts.png
 
 These graphs give you a quick summary of the population, dwelling unit, and employment totals and mixtures for the scenario
 
 The Map
 +++++++
 
-Image Here
+.. image:: graphics/BaseCase.png
 
 Analytical Engines
 ++++++++++++++++++
@@ -298,7 +298,7 @@ Discussion
 What are the Current Conditions?
 ________________________________
 
-Image here
+.. image:: graphics/BeforeEdit.png
 
 Discussion
 ++++++++++
@@ -308,7 +308,7 @@ Discussion
 Translate the Goals onto the Map
 ________________________________
 
-Image here
+.. image:: graphics/AfterEdit.png
 
 Discussion
 ++++++++++
@@ -330,6 +330,7 @@ _____________________________
  * Water Use
  * Fiscal Impacts
  * Public Health
+
 * Identify Preferred Outcomes
 
 Discussion
@@ -347,6 +348,7 @@ _____________________
 Graphics can be prepared from the analytical engines that are effective communication tools. This graphic shows the average vehicle miles traveled per household in the Sacramento Area. 
 
 .. image:: graphics/TransportEngine1.png
+
 Note: These are example presentations of the transport engine for the Sacramento area based on the Vision California work done by Calthorpe Associates in 2012.
 
 
