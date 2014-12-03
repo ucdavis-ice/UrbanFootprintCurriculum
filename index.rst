@@ -6,14 +6,24 @@
 Welcome to the UrbanFootprint Curriculum
 ========================================
 
+.. image:: graphics/UFLogo.png
+	:align: center
+	:width: 300 px
+
+
+
+
+
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    ufintro
    installation
    editing
+   basedata
+   analysismodules
 
 
 
