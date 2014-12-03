@@ -1,0 +1,7 @@
+id,UF unique id
+geography_id,original geometry id (from SACOG)
+wkb_geometry,PostGreSQL geometry field (will not be visible in ArcGIS)
+region_lu_code,SACOG land use code
+built_form_key,identifier (name of) for building  type or place type key
+created,date of data creation/import into UF system
+updated,date of data change or modifiction within UF system

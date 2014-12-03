@@ -1,0 +1,9 @@
+hh,households
+du,dwelling units
+du_detsf,detached single family dwelling units
+  du_detsf_sl,detached single family small lot dwelling units
+  du_detsf_ll,detached single family large lot dwelling units
+du_attsf,attached single family dwelling units
+du_mf,multifamily dwelling units
+  du_mf2to4,units in multifamily buildings with 2 to 4 dwelling units
+  du_mf5p,units in multifamily buildings with 5 or more dwelling units

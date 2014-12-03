@@ -1,0 +1,10 @@
+SACOG Category ,UrbanFootprint Employment Category
+EmpGov ,Emp_Public_admin
+EmpOfc ,Emp_Office_services
+EmpMed ,Emp_Medical_services
+EmpEdu ,Emp_Education
+EmpRet ,Emp_Retail_services
+EmpFood ,Emp_Restaurant
+EmpSvc ,"Emp_Entrec, Emp_Othe_services, Emp_Accomodation"
+EmpInd,"Emp_Utilities, Emp_Transware, Emp_Warehouse, Emp_Wholesale, Emp_Construction, Emp_Manufacturing, Emp_Agriculture, Emp_Extract"
+EmpOth ,Emp_military

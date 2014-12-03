@@ -22,7 +22,7 @@ Contents:
    ufintro
    installation
    editing
-   basedata
+   datapreparation
    analysismodules
 
 

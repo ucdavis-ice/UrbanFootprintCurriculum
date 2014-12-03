@@ -1,0 +1,17 @@
+Emp_Public  ,Direct Crosswalk from SACSIM Category,EmpGov
+Emp_Office,Direct Crosswalk from SACSIM Category,EmpOfc
+Emp_Medss,Direct Crosswalk from SACSIM Category,EmpMed
+Emp_Educ,Direct Crosswalk from SACSIM Category,EmpEdu
+Emp_Retail,Direct Crosswalk from SACSIM Category,EmpRet
+Emp_Restaurant,Direct Crosswalk from SACSIM Category,EmpFood
+Emp_Entrec,LEHD 2010 Near Imputed Rate (Block),EmpSvc
+Emp_Other,LEHD 2010 Near Imputed Rate (Block),EmpSvc
+Emp_Accommodation,SACOG Employment Inventory,EmpSvc
+Emp_Transware,LEHD 2010 Near Imputed Rate (Block),EmpInd
+Emp_Warehouse,LEHD 2010 Near Imputed Rate (Block),EmpInd
+Emp_Whole,LEHD 2010 Near Imputed Rate (Block),EmpInd
+Emp_Constr,LEHD 2010 Near Imputed Rate (Block),EmpInd
+Emp_Manuf,LEHD 2010 Near Imputed Rate (Block),EmpInd
+Emp_Agriculture,LEHD 2010 Near Imputed Rate (Block),EmpInd
+Emp_Extract,LEHD 2010 Near Imputed Rate (Block),EmpInd
+Emp_AF,Direct Crosswalk from SACSIM Category,EmpOth
