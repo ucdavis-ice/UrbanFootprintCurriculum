@@ -112,7 +112,8 @@ _____________________________
 Local and Regional Stakeholder Involvement
 
 
-.. image:: graphics/Communicate3.jpg 
+.. image:: graphics/Communicate3.jpg
+	:width: 300 px
 
 Build Consensus and Partnerships
 ________________________________
@@ -125,6 +126,7 @@ Inform Decision Making
 ______________________
 
 .. image:: graphics/InformDecisions.png
+	:width: 300 px
 
 After a scenario planning process the leaders responsible for adopting or implementing strategies to achieve the agreed upon goals need to take action. The improved understanding of the effects that achieving the goals laid out by the scenarios allows decision makers whether elected or appointed make informed choices. Stakeholder support and champions drawn from within the partnerships created during the scenario planning activities help those decision makers defend the choices and resist pressures to underachieve or create unnecessary exemptions.
 
@@ -132,6 +134,7 @@ What Is UrbanFootprint?
 -----------------------
 
 .. image:: graphics/UFLogo.png
+	:width: 300 px
 
 * A Scenario Planning Platform
 * Web Based
@@ -192,6 +195,7 @@ GDAL: http://www.gdal.org/
 * Geographic data translation
 
 TileStache: http://tilestache.org/
+
 * Map tile server (provides the graphical content for maps)
 
 Apache: http://httpd.apache.org/
@@ -362,11 +366,13 @@ _____________________
 
 .. image:: graphics/PublicHealth.png
 
+Demonstration graphic.
+
 Discussion
 ++++++++++
 The public health performance measure build on the results of the travel analysis. Results from it can indicate possible changes to public health (diabetes, respiratory, cardiovascular, and auto-pedestrian acciedents) based on the scenario.
 
-The results presented here are from the 2012 Vision California work conducted by Calthorpe Associates and cover the Sacramento region.
+The results presented here are demonstration graphics from the 2012 Vision California work conducted by Calthorpe Associates and cover the Sacramento region.
 
 Informing Decisions
 -------------------

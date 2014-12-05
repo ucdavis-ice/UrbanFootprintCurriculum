@@ -35,6 +35,7 @@ _________
 .. image:: graphics/Buildings.svg
 
 We know specific details about the buildings
+
 * Square footage
 * Stories
 * Parking
@@ -43,6 +44,7 @@ We know specific details about the buildings
 * Water Use
 * Rents
 * Construction Costs
+
 In many cases we can point to a “real” building.
 
 Image here (building editor)
@@ -62,6 +64,7 @@ We can group similar buildings together to create a “Building Type”
 
 Each building is assigned a percentage that it makes up of the building type.
 Examples:
+
 * Mid-rise Office
 * Garden Apartment
 * Single Family Dwelling
@@ -130,6 +133,7 @@ What are the Scenario's Goals?
 ______________________________
 
 When viewed regionally, what should the scenario include?
+
 * How much population growth?
 * What changes in demographics?
 * What kinds of housing will accommodate them?
@@ -158,6 +162,7 @@ Translating the Goals into Targets
 __________________________________
 
 Translating the Goals into Targets:
+
 * Population
 * Jobs/Housing
 * Housing Types/Mixes
@@ -174,6 +179,7 @@ Existing Conditions
 ___________________
 
 What are the conditions on the ground now? We will need work from a detailed map of what is the reality on the ground based on:
+
 * A Survey of Existing Conditions
 * Housing Stock
 * Employment Space
@@ -459,6 +465,7 @@ Query interface
 Image here
 
 **Detailed Examples**
+
 #. Define an area using the polygon selection tool.
 #. Open the query tool, note that it’s copied in the area defined by your box
 #. Where: acres_gross > 5
@@ -486,12 +493,17 @@ Any parcel that touches the shape will be selected
 
 
 **Query Based**
+
 * Select parcels based on a query
 * Useful for large area edits or applying changes to a large number of parcels that satisfy a conditon.
+
+Work Flow:
 
 #. Build your query
 
 #. Apply the query
+
+#. Apply the Place Type
 
 
 Developable Space
