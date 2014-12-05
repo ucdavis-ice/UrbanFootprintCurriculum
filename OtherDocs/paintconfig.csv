@@ -1,0 +1,6 @@
+dev_pct,development percent - proportion of geography receiving building type or place type application
+density_pct,density percent - proportional intensity of building type or place type application 
+gross_net_pct,gross-to-net percent - proportion of developed acreage that receives building type or place type application
+clear_base_flag,bullion field to indicate clearance of development program (removal of all base year dwelling units and employees)
+redevelopment_flag,bullion field to indicate/track redevelopment on geography
+dirty_flag,used internally by UF during paint application

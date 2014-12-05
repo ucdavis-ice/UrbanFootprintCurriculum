@@ -13,6 +13,7 @@ What is a scenario, and what is scenario planning?
 Scenario Planning: a brief history
 __________________________________
 .. image:: graphics/SPHistory.svg
+	:width: 600 px
 
 #. Scenario planning has a long history originating from military practices in the Roman Empire and China
 #. More recently, the RAND Corporation made notable use of it in outlining possible US responses to nuclear threats
@@ -50,6 +51,7 @@ FHWA Steps for Scenario Planning
 ++++++++++++++++++++++++++++++++
 
 .. image:: graphics/FHWA_ScenarioPlanning.png 
+	:width: 600 px
 
 #. Defining the scope of the project
 #. Identify current conditions and trends including data assembly
@@ -83,6 +85,7 @@ Explore the Range of Possiblities
 ____________________________________
 
 .. image:: graphics/RangeOfPossibilities.svg
+	:width: 600 px
 
 Scenarios are a tool that allow us to explore the range of possibilities for the future. We can propose and compare scenarios that vary widely and across many dimensions. We can push the envelope with our scenarios to look beyond what might be reasonable for implementation, but that might be instructive as we look for implementable solutions.
 
@@ -90,6 +93,7 @@ Analyze Alternatives
 ____________________________________
 
 .. image:: graphics/AnalyzeAlternatives.svg
+	:width: 600 px
 
 Comparing scenarios using analytical tools lets us compare scenario outcomes based on more than initial responses or gut feelings. Analytical tools applied to a suite of scenarios using appropriate settings allow us to compare scenarios quantitatively. While we do not have the level of certainty in these analytical tools that we have in other purpose built models (such as 4Step or activity based travel demand models), the analytical tools associated with most scenario planning can help us gage the direction and relative magnitude of effects. 
 
@@ -98,6 +102,7 @@ Address Uncertainty
 ___________________
 
 .. image:: graphics/AddressUncertainty.svg
+	:width: 600 px
 
 Uncertainty comes in many forms. Building a suite of scenarios can help us choose options that remain viable under a wider variety of factors that we cannot control locally. 
 
@@ -113,12 +118,13 @@ Local and Regional Stakeholder Involvement
 
 
 .. image:: graphics/Communicate3.jpg
-	:width: 300 px
+	:width: 600 px
 
 Build Consensus and Partnerships
 ________________________________
 
 .. image:: graphics/BuildConsensus.png
+	:width: 600 px
 
 Active (early and frequent) involvement of stakeholders in the discussions throughout the scenario planning activities helps build the partnerships that can create a robust and enduring vision for the future.  Project champions that will support efforts to achieve the goals defined in the scenario are likely to emerge from these partnerships. 
 
@@ -126,7 +132,7 @@ Inform Decision Making
 ______________________
 
 .. image:: graphics/InformDecisions.png
-	:width: 300 px
+	:width: 600 px
 
 After a scenario planning process the leaders responsible for adopting or implementing strategies to achieve the agreed upon goals need to take action. The improved understanding of the effects that achieving the goals laid out by the scenarios allows decision makers whether elected or appointed make informed choices. Stakeholder support and champions drawn from within the partnerships created during the scenario planning activities help those decision makers defend the choices and resist pressures to underachieve or create unnecessary exemptions.
 
@@ -134,7 +140,7 @@ What Is UrbanFootprint?
 -----------------------
 
 .. image:: graphics/UFLogo.png
-	:width: 300 px
+	:width: 400 px
 
 * A Scenario Planning Platform
 * Web Based
@@ -227,7 +233,7 @@ This means that it can be installed, used, and customized without licensing fees
 A Tour of UrbanFootprint
 ________________________
 
-.. image:: graphics/BaseCase.png
+.. image:: graphics/BaseCondition.png
 
 Scenario Management
 +++++++++++++++++++
@@ -241,7 +247,8 @@ Scenario Management
 Layer Management
 ++++++++++++++++
 
-.. image:: graphics/LayerManagment1.png
+ToDo: Fix this graphic
+.. image:: graphics/ScenarioA_LayerOrder.png
 
 * Turning layers on and off within your display.
 * Changing layer display options
@@ -250,19 +257,19 @@ Layer Management
 Charts
 ++++++
 
-.. image:: graphics/Charts.png
+.. image:: graphics/ScenarioA_Explore.png
 
 These graphs give you a quick summary of the population, dwelling unit, and employment totals and mixtures for the scenario
 
 The Map
 +++++++
 
-.. image:: graphics/BaseCase.png
+.. image:: graphics/BaseCondition.png
 
 Analytical Engines
 ++++++++++++++++++
 
-.. image:: graphics/AnalyticalEngines.png
+.. image:: graphics/ScenarioA_Analysis.png
 
 * A wide range of analytical tools that have been built to work with UrbanFootprint.
 * Many are linked to each other meaning that outputs from the transportation analysis feed into the public health, criteria pollutant emissions, household costs, and greenhouse gas calculations.

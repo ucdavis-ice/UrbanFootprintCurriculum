@@ -1,0 +1,20 @@
+intersection_density_sqmi,density of walkable street intersections in the geography (calculated as a weighted square mile density)
+acres_gross,gross/total acreage of the geography
+acres_parcel,gross/total acreage of the parcel(s)
+sqft_parcel,parcel square footage
+acres_parcel_res,residential acreage of the parcel
+  acres_parcel_res_detsf_sl,acreage of parcel with single family small lot detached homes (<5500sf)
+  acres_parcel_res_detsf_ll,acreage of parcel with single family large lot detached homes (>5500sf)
+  acres_parcel_res_attsf,acreage of parcel with single family attached homes/townhomes
+  acres_parcel_res_mf,acreage of parcel with multifamily housing
+acres_parcel_emp,acreage of parcel with employment 
+  acres_parcel_emp_off,acreage of parcel with office employment
+  acres_parcel_emp_ret,acreage of parcel with retail employment
+  acres_parcel_emp_ind,acreage of parcel with industrial employment
+  acres_parcel_emp_ag,acreage of parcel with agricultural employment
+  acres_parcel_emp_mixed,acreage of parcel with mixed employment uses
+  acres_parcel_emp_military,acreage of parcel with military employment
+acres_parcel_mixed,acreage of parcel with mixed use (residential and employment)
+  acres_parcel_mixed_w_off,acreage of mixed use parcels with residential and employment (includes office employment)
+  acres_parcel_mixed_no_off,acreage of mixed use parcels with residential and employment (no office employment
+acres_parcel_no_use,acreage of parcel with no use
