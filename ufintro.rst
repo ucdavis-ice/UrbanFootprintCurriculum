@@ -238,21 +238,24 @@ ________________________
 Scenario Management
 +++++++++++++++++++
 
-.. image:: graphics/ScenarioManagement.png
-
 * Switching between scenarios and the base condition
 * Quick summary of scenario population, dwelling units, and employment
 * Access to the menus for creating and deleting new scenarios
 
+
+.. image:: graphics/BaseCond_Explore.png
+
+
 Layer Management
 ++++++++++++++++
-
-ToDo: Fix this graphic
-.. image:: graphics/ScenarioA_LayerOrder.png
 
 * Turning layers on and off within your display.
 * Changing layer display options
 * Adding new layers
+
+.. image:: graphics/ScenarioA_LayerOrder.png
+
+
 
 Charts
 ++++++
@@ -269,12 +272,12 @@ The Map
 Analytical Engines
 ++++++++++++++++++
 
-.. image:: graphics/ScenarioA_Analysis.png
-
 * A wide range of analytical tools that have been built to work with UrbanFootprint.
 * Many are linked to each other meaning that outputs from the transportation analysis feed into the public health, criteria pollutant emissions, household costs, and greenhouse gas calculations.
 * At present most of these tools have to be run from command line on the server not through the User Interface (UI).
 * These analytical engines frequently require calibration to the local environment.
+
+.. image:: graphics/ScenarioA_Analysis.png
 
 
 Creating Scenarios
@@ -309,7 +312,7 @@ Discussion
 What are the Current Conditions?
 ________________________________
 
-.. image:: graphics/BeforeEdit.png
+.. image:: graphics/BaseCond_Explore.png
 
 Discussion
 ++++++++++
@@ -319,7 +322,13 @@ Discussion
 Translate the Goals onto the Map
 ________________________________
 
-.. image:: graphics/AfterEdit.png
+Before Editing
+
+.. image:: graphics/ScenarioA_BeforeEdit.png
+
+After Edit
+
+.. image:: graphics/ScenarioA_AfterEdit.png
 
 Discussion
 ++++++++++
