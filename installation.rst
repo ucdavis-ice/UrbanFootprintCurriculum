@@ -11,7 +11,10 @@ Code that you would type in on the command line will look like:
   sudo mkdir new_directory
 
 These commands can generally be cut and pasted into the command line. 
+
 **Hint:** windows user using putty can select the text and then paste it into the terminal window by right clicking.
+
+*Each line that appears in a section of code should be entered as an individual line, executed, and then the next line should be entered and executed.*
 
 Setup
 -----
@@ -137,23 +140,25 @@ _____________________
 
 After the installation completes, you will need to do some initial configuration of the installation.
 
+Set the user and virtual environment
+++++++++++++++++++++++++++++++++++++
+
 Do the following steps:
+To log in as the "calthorpe" user under which most of the server is setup.
 ::
   sudo su calthorpe
 
-To log in as the "calthorpe" user under which most of the server is setup.
+To move to the folder holding the configuration settings.
 ::
   cd /srv/calthorpe/urbanfootprint/footprint
 
-To move to the folder holding the configuration settings.
+To make a copy of the default settings file for customization
 ::
   cp local_settings.py.default local_settings.py.mycopy
 
-To make a copy of the default settings file for customization
+To create a link between the configuration settings copy we made and the file name expected by UrbanFootprint.
 ::
   ln -sf local_settings.py.mycopy local_settings.py
-
-To create a link between the configuration settings copy we made and the file name expected by UrbanFootprint.
 
 Step 6: Add yourself as an administrator
 ________________________________________
@@ -202,7 +207,7 @@ I recommend using FileZilla (or similar SFTP capable FTP Client) to get your dat
 
 Establish a connection profile, and specify the use of the username (ubuntu for an EC2 instance) and making sure that your pageant install is loading the ssh key. 
 
-Transfer the *.dump file to the server
+Transfer the <filename>.dump file to the server
 
 Step 9: Create a staging database
 _________________________________
@@ -226,22 +231,18 @@ Create a staging database
   createdb stage_db
 
 If you get an error stating that the database "calthorpe" does not exist, create the calthorpe database for convenience.
-
 ::
   createdb calthorpe
 
 Then:
-
 ::
   createdb stage_db
 
 Add the postgis extension to stage_db
-
 ::
   psql -d stage_db -c "CREATE EXTENSION postgis;"
 
 Then import the database dump to the staging database.
-
 ::
   pg_restore -d stage_db /home/ubuntu/UF_yolo_data.dump
 
@@ -252,27 +253,24 @@ ________________________________
 
 First, a work around that is needed on Amazon instances to work within the security system.
 
-Note: If you're doing a non-amazon installation then you'llw ant to substitute "local_prod" in place of "amazon_local" and can skip past the next few lines to configuring the connection to the staging database.
+Note: If you're doing a non-amazon installation then you'llw ant to substitute "local_prod" in place of "amazon_local" and can skip past the next few lines to "configuring the connection to the staging database".
 
 Copy the PEM file that you're using to connect to the server to the /home/calthorpe/.ssh
 
-First uploade it the same way you did the data dump file to /home/ubuntu/
+First upload it the same way you did the data dump file to /home/ubuntu/ 
 
-Then:
-
+Then do the following which will move the pem file to the calthorpe user folders and set permissions so that it can be used as a ssh key.
 ::
   cd /home/calthorpe/.ssh
   sudo mv /home/ubuntu/<name>.pem <name>.pem
-  chmod 600 <name>.pem
+  sudo chmod 600 <name>.pem
 
 Update the fabric host files so that they recognize that key/pem file
-
 ::
   /srv/calthorpe/urbanfootprint/fabfile/hosts
   nano __init__.py
 
 In the def amazon_local(): section, update the path at:
-
 ::
   env.key_filename = '/home/calthorpe/.ssh/pemfile.pem'
 
@@ -281,7 +279,6 @@ To point to the pem file you just copied into place.
 Then save the changes with Ctrl+X and Y to save the changes.
 
 Next we need to make sure that the file is not over written the next time we pull an update of the code (which will happen shortly).
-
 ::
   git commit -a -m "adjusted local settings"
 
@@ -293,13 +290,11 @@ Connecting to the staging database
 Last, we need to tell UrbanFootprint how it is going to connect to the staging database.
 
 This tutorial is built around the SACOG data model so we'll use that now.
-
 ::
   cd /srv/calthorpe/urbanfootprint/footprint/client/configuration/sacog
   nano sacog_init.py
 
 Look for a section that like: (approximatley line 45, use Ctrl+C to show the line number where the cursor is at present).
-
 ::
   def import_database(self):
     if settings.USE_LOCAL_SAMPLE_DATA_SETS:
@@ -314,7 +309,6 @@ Look for a section that like: (approximatley line 45, use Ctrl+C to show the lin
 Edit the host = and database = to point to 'localhost', and the name of your staging database resepectively (so they may look like the example above)
 
 And then commit our changes to git.
-
 ::
   git commit -a -m "adjusted staging database settings"
 
@@ -326,22 +320,18 @@ Some of these steps may take a long time to complete
 
 
 Specify the client name and settings
-
 ::
   fab amazon_local client:sacog
 
 Import the staging database settings
-
 ::
   fab amazon_local local_settings:stage
 
 Do a code update. This is an abbreviated version of the installation that we did earlier.
-
 ::
   fab amazon_local deploy
 
 Do the data import and system setup.
-
 ::
   fab amazon_local recreate_dev
 
