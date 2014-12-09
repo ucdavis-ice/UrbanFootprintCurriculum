@@ -195,8 +195,157 @@ Tilestache will be unable to run until we give it some mapping data to work with
 This concludes the primary installation of UrbanFootprint.
 
 
+Step 8: Transfer base data to server
+____________________________________
+
+I recommend using FileZilla (or similar SFTP capable FTP Client) to get your data onto the server.
+
+Establish a connection profile, and specify the use of the username (ubuntu for an EC2 instance) and making sure that your pageant install is loading the ssh key. 
+
+Transfer the *.dump file to the server
+
+Step 9: Create a staging database
+_________________________________
+
+Switch your user name to the calthorpe user and activate the virtual environment that UrbanFootprint runs in. You will need to do activate the virtual environment any time you're making changes to UrbanFootprint's configuration from the commandline.
+
+Switch to the calthorpe user.
+::
+  su calthorpe
+
+And enter the calthorpe password: Calthorpe123
+
+Activate the virtual environment
+::
+  cd /srv/calthorpe/urbanfootprint/
+  source /srv/calthorpe_env/bin/activate
 
 
+Create a staging database
+::
+  createdb stage_db
+
+If you get an error stating that the database "calthorpe" does not exist, create the calthorpe database for convenience.
+
+::
+  createdb calthorpe
+
+Then:
+
+::
+  createdb stage_db
+
+Add the postgis extension to stage_db
+
+::
+  psql -d stage_db -c "CREATE EXTENSION postgis;"
+
+Then import the database dump to the staging database.
+
+::
+  pg_restore -d stage_db /home/ubuntu/UF_yolo_data.dump
+
+This is assuming the data you're loading is in a file called UF_yolo_data.dump and that it is in the home directory of the ubuntu user. Adjust the path to the dump file as needed.
+
+Step 10. Prepare for data import 
+________________________________
+
+First, a work around that is needed on Amazon instances to work within the security system.
+
+Note: If you're doing a non-amazon installation then you'llw ant to substitute "local_prod" in place of "amazon_local" and can skip past the next few lines to configuring the connection to the staging database.
+
+Copy the PEM file that you're using to connect to the server to the /home/calthorpe/.ssh
+
+First uploade it the same way you did the data dump file to /home/ubuntu/
+
+Then:
+
+::
+  cd /home/calthorpe/.ssh
+  sudo mv /home/ubuntu/<name>.pem <name>.pem
+  chmod 600 <name>.pem
+
+Update the fabric host files so that they recognize that key/pem file
+
+::
+  /srv/calthorpe/urbanfootprint/fabfile/hosts
+  nano __init__.py
+
+In the def amazon_local(): section, update the path at:
+
+::
+  env.key_filename = '/home/calthorpe/.ssh/pemfile.pem'
+
+To point to the pem file you just copied into place.
+
+Then save the changes with Ctrl+X and Y to save the changes.
+
+Next we need to make sure that the file is not over written the next time we pull an update of the code (which will happen shortly).
+
+::
+  git commit -a -m "adjusted local settings"
+
+This records our changes into the local copy of the git repository so that they are not over written.
+
+Connecting to the staging database
+++++++++++++++++++++++++++++++++++
+
+Last, we need to tell UrbanFootprint how it is going to connect to the staging database.
+
+This tutorial is built around the SACOG data model so we'll use that now.
+
+::
+  cd /srv/calthorpe/urbanfootprint/footprint/client/configuration/sacog
+  nano sacog_init.py
+
+Look for a section that like: (approximatley line 45, use Ctrl+C to show the line number where the cursor is at present).
+
+::
+  def import_database(self):
+    if settings.USE_LOCAL_SAMPLE_DATA_SETS:
+      ...
+    else:
+      return dict(
+        host = 'localhost',
+        database = 'stage_db',
+        user = 'calthorpe',
+      )
+
+Edit the host = and database = to point to 'localhost', and the name of your staging database resepectively (so they may look like the example above)
+
+And then commit our changes to git.
+
+::
+  git commit -a -m "adjusted staging database settings"
+
+
+Step 11. Build UrbanFootprint
+_____________________________
+
+Some of these steps may take a long time to complete
+
+
+Specify the client name and settings
+
+::
+  fab amazon_local client:sacog
+
+Import the staging database settings
+
+::
+  fab amazon_local local_settings:stage
+
+Do a code update. This is an abbreviated version of the installation that we did earlier.
+
+::
+  fab amazon_local deploy
+
+Do the data import and system setup.
+
+::
+  fab amazon_local recreate_dev
+
+You will be asked twice if you want to continue because if you have an existing UrbanFootprint database of the same name it will be completely overwritten by this step.  
 
 
 
