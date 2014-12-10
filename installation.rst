@@ -146,7 +146,12 @@ Set the user and virtual environment
 Do the following steps:
 To log in as the "calthorpe" user under which most of the server is setup.
 ::
-  sudo su calthorpe
+  su calthorpe
+
+You'll be able to tell that this worked if you see your command line looking something like:
+::
+  calthorpe@....$
+
 
 To move to the folder holding the configuration settings.
 ::
@@ -199,6 +204,10 @@ Tilestache will be unable to run until we give it some mapping data to work with
 
 This concludes the primary installation of UrbanFootprint.
 
+If you would like, you can now remove the urbanfootprint directory in /home/ubuntu by:
+::
+  rm -rf urbanfootprint
+
 
 Step 8: Transfer base data to server
 ____________________________________
@@ -214,6 +223,10 @@ _________________________________
 
 Switch your user name to the calthorpe user and activate the virtual environment that UrbanFootprint runs in. You will need to do activate the virtual environment any time you're making changes to UrbanFootprint's configuration from the commandline.
 
+if you don't see the start of the command prompt looking like:
+::
+  calthorpe@....$
+
 Switch to the calthorpe user.
 ::
   su calthorpe
@@ -224,6 +237,10 @@ Activate the virtual environment
 ::
   cd /srv/calthorpe/urbanfootprint/
   source /srv/calthorpe_env/bin/activate
+
+After activating the virtual environment your command prompt should look like:
+::
+  (calthorpe_env)calthorpe@...$
 
 
 Create a staging database
@@ -264,10 +281,11 @@ Then do the following which will move the pem file to the calthorpe user folders
   cd /home/calthorpe/.ssh
   sudo mv /home/ubuntu/<name>.pem <name>.pem
   sudo chmod 600 <name>.pem
+  sudo chown calthorpe:calthorpe <name>.pem
 
 Update the fabric host files so that they recognize that key/pem file
 ::
-  /srv/calthorpe/urbanfootprint/fabfile/hosts
+  cd /srv/calthorpe/urbanfootprint/fabfile/hosts
   nano __init__.py
 
 In the def amazon_local(): section, update the path at:
@@ -304,6 +322,7 @@ Look for a section that like: (approximatley line 45, use Ctrl+C to show the lin
         host = 'localhost',
         database = 'stage_db',
         user = 'calthorpe',
+        password = 'Calthorpe123'
       )
 
 Edit the host = and database = to point to 'localhost', and the name of your staging database resepectively (so they may look like the example above)
@@ -318,20 +337,23 @@ _____________________________
 
 Some of these steps may take a long time to complete
 
+Switch back to the main urbanfootprint folder.
+::
+  cd /srv/calthorpe/urbanfootprint
 
-Specify the client name and settings
+Specify the client name and settings (takes about 2min.)
 ::
   fab amazon_local client:sacog
 
-Import the staging database settings
+Import the staging database settings (takes about 2min.)
 ::
   fab amazon_local local_settings:stage
 
-Do a code update. This is an abbreviated version of the installation that we did earlier.
+Do a code update. This is an abbreviated version of the installation that we did earlier. (takes about 2 min.)
 ::
   fab amazon_local deploy
 
-Do the data import and system setup.
+Do the data import and system setup. (takes 30min+)
 ::
   fab amazon_local recreate_dev
 
