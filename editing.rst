@@ -253,32 +253,39 @@ A basic tour of UrbanFootprint
 Overview
 ________
 
-Image here
+.. image:: graphics/BaseCondition.png
 
-Scenario Management
-___________________
+Scenario Management and Charts
+++++++++++++++++++++++++++++++
 
-Image here
+
+.. image:: graphics/ButtonLocation_Explore.svg
 
 Layer Management
-________________
+++++++++++++++++
 
-Image here
+.. image:: graphics/ButtonLocation_LayerManagement.svg
 
-Charts
-______
+Zoom, Pan, and Select
++++++++++++++++++++++
 
-Image here
+.. image:: graphics/ButtonLocation_ZoomPanSelect.svg
 
-Map
-___
+Place Type Editor
++++++++++++++++++
 
-Image here
+.. image:: graphics/ButtonLocation_PlaceTypeEditor.svg
 
-Scenario Builder and Analysis
-_____________________________
+Scenario Builder
+++++++++++++++++
 
-Image here
+.. image:: graphics/ButtonLocation_Editor.svg
+
+Analysis Modules
+++++++++++++++++
+
+.. image:: graphics/ButtonLocation_Analysis.svg
+
 
 Scenario Mangement
 ------------------
@@ -290,7 +297,7 @@ Scenario Mangement
 * Edit scenario details
 * Review current scenario populations and employment
 
-Image here
+.. image:: graphics/ManageScenarios.png
 
 * Create a New Scenario
  
@@ -327,12 +334,14 @@ Image Here
 Layer Management
 ----------------
 
-Image here
+.. image:: graphics/ScenarioA_LayerOrder.png
 
 * Import Layer
 * Layer ordering
 * No Symbology Editing
 * Export Layers to File Geodatabase
+
+
 
 
 Basic Layer Management
@@ -362,7 +371,7 @@ ______________
 Advanced Layer Management
 _________________________
 
-Image here
+.. image:: graphics/AddLayer.png
 
 Access the Manage Layers Window by clicking on the down arrow in the layer manager
 
@@ -618,8 +627,12 @@ Exercise
 
 **Create your own scenario**
 
-* SACOG’s Scenario B (Sutter County):
+What will your priorities be? How much population will you add? How many new jobs? What kinds of each? And where will you put them?
 
+
+* Yolo County:
+
+ * Copy Scenario A 
  * Add ~14,000 Population
  * Add ~5,500 Dwelling Units
  * Add ~2,000 Jobs
