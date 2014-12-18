@@ -255,11 +255,15 @@ ________
 
 .. image:: graphics/BaseCondition.png
 
-Scenario Management and Charts
-++++++++++++++++++++++++++++++
-
+Scenario Switching and Charting
++++++++++++++++++++++++++++++++
 
 .. image:: graphics/ButtonLocation_Explore.svg
+
+Scenario Management
++++++++++++++++++++
+
+.. image:: graphics/ButtonLocation_ScenarioManagement.svg
 
 Layer Management
 ++++++++++++++++
@@ -303,6 +307,8 @@ Scenario Mangement
  
  * Click on the New Scenario button
 
+*Note:* When starting a new area, it is a good idea to create a copy of the Scenario A that is automatically created to use as the starting point for any other new scenarios. Basically, the first thing that you do is make a copy of Scenario A to a "New Scenario Template" and any time you want to make another scenario you do so by making a copy of the template.
+
 * Copy a Scenario
 
  * Click on the green icon next to a scenario name.
@@ -322,8 +328,11 @@ Scenario Mangement
 Charts
 ------
 
-Image Here
+Access the charts by clicking on the "explore" button to slide the top panel open.
 
+.. image:: graphics/Charts.png
+
+Charts:
 * Provide immediate feedback on the Scenario
 * By Increment and End State
 * Population, Dwelling Unit, and Employment Totals
@@ -370,6 +379,13 @@ ______________
 
 Advanced Layer Management
 _________________________
+
+.. image:: graphics/ButtonLocation_AdvancedLayerManagement.png
+
+Then select the Manage Layers option to open the advanced layer management options including adding layers and defining their roles.
+
+Alternatively, you can select "Export Active Layer - to gdb" if you would like to download the active layer for use in ESRI's GIS software.
+
 
 .. image:: graphics/AddLayer.png
 
@@ -446,7 +462,7 @@ In a polygon to centroid relationship, all of the polygons from the primary laye
 Import Layer
 ____________
 
-Image here
+.. image:: graphics/AddLayer.png
 
 #. Click on “Add New Layer”
 #. Choose a zipped shapefile
@@ -464,14 +480,46 @@ Image here
 Query Based Selection
 _____________________
 
-Image Here
-
-A slightly more advanced operation that requires basic familiarity with SQL and a little understanding of the database.
+Query based selection is a slightly more advanced operation that requires basic familiarity with SQL and a little understanding of the database.
 
 The operation selects features in the Active Layer based on a query that you provide.
 
-Query interface
-Image here
+Query interface:
+.. image:: graphics/QuerySelect1.png
+
+First Example:
+
+Assume that you've selected a set of polygons as in the image above. But, you want to refine your selection to include only the polygons that have 'land_use' = 'Blank Place Type'
+
+This can be done using the query options. 
+
+Open the upper panel by clicking on the "Explore" button, and then select the second tab from the very top on the far left (the table icon) to view the table. At this point you should see something similar to the image above if you've selected some parcels from the Existing Land Use Parcels Layer. 
+
+Then, in the where box enter "existing_land_use_parcels.land_use = 'Blank Place Type'" as shown in the picture below making sure that the "Limit Results to Selected Area" box is checked so that the selection will be made from within your existing selection. *Note:* the arrow right next to the where box will help you look up the names of the available fields and insert them into the box.
+
+.. image:: graphics/QuerySelect2.png
+
+Then, click the green "Query" button. You should get a result that looks like the image below.
+
+.. image:: graphics/QuerySelect3.png
+
+This selection process is the first step of many actions you may take. One of the most common will be selecting parcels in the "End State Canvas" of a scenario and then applying a place or building type to them.
+
+Another alternative is performing an "Aggregate Query" on them to get totals.
+
+To do this click on the button on the far left right below the table button on the top panel to switch to the Feature Summary or Aggregate view. 
+
+Then, you can perform summaries of the selected featurs such as calculating the total population or acres, or average acres or count of feature. This supports the use of "Group By" so that, for example, you can get the total number of housing units by land use type.
+
+Here's an example that continues from our previous point. Enter "SUM(existing_land_use_parcels.acres)" in the "Aggregates" box and leave Group By empty. Like before, the downward pointing arrow will give you a list of available fields and insert them.
+
+ .. image:: graphics/QueryAggregate1.png
+
+That tells us that our selected parcels have a total area of 9.51 acres.
+
+ .. image:: graphics/QueryAggregate2.png
+
+
 
 **Detailed Examples**
 

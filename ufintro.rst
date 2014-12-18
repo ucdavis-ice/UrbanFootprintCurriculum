@@ -242,7 +242,6 @@ Scenario Management
 * Quick summary of scenario population, dwelling units, and employment
 * Access to the menus for creating and deleting new scenarios
 
-
 .. image:: graphics/BaseCond_Explore.png
 
 
