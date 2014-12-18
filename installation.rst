@@ -60,13 +60,29 @@ http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
 AWS Security Profile
 ++++++++++++++++++++
 
+Inbound traffic: 
+Type		Protocol	Port Range	Source
+SSH		TCP		22		0.0.0.0/0
+HTTP		TCP		80		0.0.0.0/0
+Custom TCP	TCP		8081		0.0.0.0/0
+
+These settings are worth reviewing with your system administrator.
+It would be a good idea to restrict the SSH sources to an IP range that exists within your organization for improved security. The same is true of the Custom TCP o n Port 8081 if you're assigning an IP address directly to the machine or paying for a fixed one from Amazon. 
+
+the HTTP port 80 is the standard port that almost all web traffic uses and as such needs to be left open to all sources that may want to use UrbanFootprint. You could use this to limit access to only your organization.
+
+
+Outbound traffic:
+All traffic and all protocols on all ports to all destinations are open. i.e. there's no restrictions on outbound traffic.
 
 Create Instance
 +++++++++++++++
 
 Ubuntu 14.04LTS 64 Bit
 
-m3.2xlarge
+A *m3.2xlarge* instance seems to work well, and at present has a cost of $0.56 per hour (which may change).
+
+Note: I have run it on a m3.large instance and the reduced number of cpus and ram. It is possible, and is cheaper, but is not as effective as the larger instance if you need to run any of the complex analytical modules.  
 
 No extra storage (it could be added later). 
 
