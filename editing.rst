@@ -263,7 +263,7 @@ Scenario Switching and Charting
 Scenario Management
 +++++++++++++++++++
 
-.. image:: graphics/ButtonLocation_ScenarioManagement.svg
+.. image:: graphics/ButtonLocation_ScenarioManager.svg
 
 Layer Management
 ++++++++++++++++
@@ -380,7 +380,7 @@ ______________
 Advanced Layer Management
 _________________________
 
-.. image:: graphics/ButtonLocation_AdvancedLayerManagement.png
+.. image:: graphics/ButtonLocation_AdvancedLayerManagement.svg
 
 Then select the Manage Layers option to open the advanced layer management options including adding layers and defining their roles.
 
@@ -519,7 +519,11 @@ That tells us that our selected parcels have a total area of 9.51 acres.
 
  .. image:: graphics/QueryAggregate2.png
 
+Second Example:
 
+It is also possible to use joins. For example if we're looking at a scenario and are viewing the table with nothing selected, we can use a join to bring in informaton from other linked tables (based on the relationships discussed above in layer management). 
+
+In this case, I'm going to join in the "vehicle_miles_traveled" layer and do my selection based on: "vehicle_miles_traveled.vmt_daily_per_capita > 35"
 
 **Detailed Examples**
 
