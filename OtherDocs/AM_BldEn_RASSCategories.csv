@@ -1,0 +1,27 @@
+UrbanFootprint Building Type,Simplified UrbanFootprint,RASS Categories,Annual Electricity Use Factor (kWh/unit),Annual Gas Use Factor (therms/unit)
+,Residential Building Type,,,
+Mixed Use Types,,,,
+Skyscraper Mixed Use,Multifamily,Apt/Condo 5+,"3,790 kWh",243 thm
+High-Rise Mixed Use,Multifamily,Apt/Condo 5+,"3,790 kWh",243 thm
+Mid-Rise Mixed Use,Multifamily,Apt/Condo 5+,"3,790 kWh",243 thm
+Low-Rise Mixed Use,Multifamily,Apt/Condo 5+,"3,790 kWh",243 thm
+Parking Structure/Mixed Use,Multifamily,Apt/Condo 5+,"3,790 kWh",243 thm
+Main Street Commercial/MU High,Multifamily,Apt/Condo 5+,"3,790 kWh",243 thm
+Main Street Commercial/MU Low,Multifamily,Apt/Condo 5+,"3,790 kWh",243 thm
+Residential Types,,,,
+Skyscraper Residential,Multifamily,Apt/Condo 5+,"3,790 kWh",243 thm
+High-Rise Residential,Multifamily,Apt/Condo 5+,"3,790 kWh",243 thm
+Urban Mid-Rise Residential,Multifamily,Apt/Condo 5+,"3,790 kWh",243 thm
+Urban Podium Multi-Family,Multifamily,Apt/Condo 5+,"3,790 kWh",243 thm
+Standard Podium Multi-Family,Multifamily,Apt/Condo 5+,"3,790 kWh",243 thm
+Suburban Multifamily Apt/Condo,Multifamily,Apt/Condo 5+,"3,790 kWh",243 thm
+Urban Townhome/Live-Work,SF Attached,Townhouse,"4,915 kWh",332 thm
+Standard Townhome,SF Attached,Townhouse,"4,915 kWh",332 thm
+Garden Apartment,Multifamily,Apt/Condo 5+,"3,790 kWh",243 thm
+Very Small Lot 3000,SF Small Lot,SF 1250-2000 sqft,"7,150 kWh",389 thm
+Small Lot 4000,SF Small Lot,SF 1250-2000 sqft,"7,150 kWh",389 thm
+Medium Lot 5500,SF Small Lot,SF 1250-2000 sqft,"7,150 kWh",389 thm
+Large Lot 7500,SF Large Lot,SF 2000+ sqft,"9,645 kWh",504 thm
+Estate Lot,SF Large Lot,SF 2000+ sqft,"9,645 kWh",504 thm
+Rural Residential,SF Large Lot,SF 2000+ sqft,"9,645 kWh",504 thm
+Rural Ranchette,SF Large Lot,SF 2000+ sqft,"9,645 kWh",504 thm
