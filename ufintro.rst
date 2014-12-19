@@ -395,9 +395,6 @@ Informing Decisions
 **People make decisions**
 Scenario planning provides information
 
-Discussion
-++++++++++
-
 #. Remember that scenario planning does not make decisions, it supports the exploration of scenarios and the identification of the effects (performance measures) that are likely if a scenario were to become reality.
 #. The analytical modules provide a standardized way to compare scenarios by performance measure.
 #. Based on the suite of performance measures decision makers can select a scenario as preferred vision for the future and develop strategies and plans to achieve it.
