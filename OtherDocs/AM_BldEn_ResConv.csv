@@ -1,0 +1,21 @@
+Year,Energy efficiency factor ? (Target reduction INPUT),New Units built in year,Total Units,Baseline energy use per unit,Efficient energy use per unit (energy reduction applied),Vintage totals ? total energy used by buildings constructed within one yearÿ,Annual total ? total energy used by buildings of all ages,Average energy use per unit,Effective end-year efficiency reduction
+2010,0%,0,0,100 thm,100 thm,0 thm,0 thm,0 thm,0%
+2011,2%,"2,500","2,500",100 thm,98 thm,"245,000 thm","245,000 thm",98 thm,-2%
+2012,4%,"2,500","5,000",100 thm,96 thm,"240,000 thm","485,000 thm",97 thm,-3%
+2013,6%,"2,500","7,500",100 thm,94 thm,"235,000 thm","720,000 thm",96 thm,-4%
+2014,8%,"2,500","10,000",100 thm,92 thm,"230,000 thm","950,000 thm",95 thm,-5%
+2015,10%,"2,500","12,500",100 thm,90 thm,"225,000 thm","1,175,000 thm",94 thm,-6%
+2016,12%,"2,500","15,000",100 thm,88 thm,"220,000 thm","1,395,000 thm",93 thm,-7%
+2017,14%,"2,500","17,500",100 thm,86 thm,"215,000 thm","1,610,000 thm",92 thm,-8%
+2018,16%,"2,500","20,000",100 thm,84 thm,"210,000 thm","1,820,000 thm",91 thm,-9%
+2019,18%,"2,500","22,500",100 thm,82 thm,"205,000 thm","2,025,000 thm",90 thm,-10%
+2020,20%,"2,500","25,000",100 thm,80 thm,"200,000 thm","2,225,000 thm",89 thm,-11%
+2021,22%,"2,500","27,500",100 thm,78 thm,"195,000 thm","2,420,000 thm",88 thm,-12%
+        ?,,,,,,,,,
+2034,48%,"2,500","60,000",100 thm,52 thm,"130,000 thm","4,500,000 thm",75 thm,-25%
+2035,50%,"2,500","62,500",100 thm,50 thm,"125,000 thm","4,625,000 thm",74 thm,-26%
+2036,52%,"2,500","65,000",100 thm,48 thm,"120,000 thm","4,745,000 thm",73 thm,-27%
+        ?,,,,,,,,,
+2049,78%,"2,500","97,500",100 thm,22 thm,"55,000 thm","5,850,000 thm",60 thm,-40%
+2050,80%,"2,500","100,000",100 thm,20 thm,"50,000 thm","5,900,000 thm",59 thm,-41%
+,,,,,,,,,

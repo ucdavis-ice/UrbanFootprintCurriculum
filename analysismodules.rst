@@ -19,13 +19,22 @@ As shown in the image above, many of the analytical modules are connected to eac
 Land Consumption
 ----------------
 
+UrbanFootprint identifies the amount of greenfield and refill land consumed in the scenario.
+
+*Figure LC 1: The Land Consumption Measurement Process*
+
 .. image:: graphics/AM_LandConsumption.png
 
-UrbanFootprint identifies the amount of greenfield land consumed based on the base case, and then evaluates that new consumption against environmental constraint, agricultural, or other defined land types.
+It does this by using a dataset to divide the entire landscape into greenfield and developed space, this has been done in the past using the FMMP.
+
+Each polygon then has a percentage of it's land area that is developable greenfield space and developable "refill" space. The polygon is then analyzed so that if it has more developable greenfield space than refill any development in the polygon is considered greenfield consumption and if there is more developable refill space than greenfield any development is considered refill. The total acrage of greenfield and refill development is then calculated across the entire scenario.
+
 
 .. image:: graphics/SJVExample.png
 
 A comparison of the 2050 projections in Scenarios A and B+ from the San Joaquin Valley Blueprint (2009)
+
+
 
 
 Building Energy Use
