@@ -19,31 +19,15 @@ As shown in the image above, many of the analytical modules are connected to eac
 Land Consumption
 ----------------
 
-UrbanFootprint identifies the amount of greenfield land consumed based on the base case, and then evaluates that new consumption against environmental constraint, agricultural, or other defined land types.
+UrbanFootprint identifies the amount of greenfield and refill land consumed in the scenario.
 
 *Figure LC 1: The Land Consumption Measurement Process*
 
 .. image:: graphics/AM_LandConsumption.png
 
-As a spatial model, UrbanFootprint produces fine-grained assessments of how land is developed or consumed in a future scenario. In the context of the model, “land consumption” refers to the
-measurement of land area needed to accommodate new growth. This includes ‘greenfield’ development on previously undeveloped land, and refill (infill and redevelopment) growth in existing urban areas.
-Land consumption calculations for future scenarios are built upon an assessment of the base (existing) environment. The base data loading process assigns to each grid cell descriptors of its land type
-conditions, which are used to describe how new growth impacts the landscape; whether it will consume new land as greenfield development, intensify or modify existing urban areas as refill development, or
-be excluded from development by environmental, conservation, or policy constraints. For a future scenario, UrbanFootprint analyzes the extent of land use change and maps the area of greenfield land as
-well as areas of previously urbanized land (refill development) required to accommodate new residential and employment growth (see Figure LC 1).
+It does this by using a dataset to divide the entire landscape into greenfield and developed space, this has been done in the past using the FMMP.
 
-
-
-Land Consumption Inputs
-+++++++++++++++++++++++
-
-The Land Consumption analysis accounts for consumed land by intersecting scenario ‘change areas’ with  an assessment of land cover in the base environment. The assessment of land cover in the base  environment can be as detailed or as general as the user and data allows. UrbanFootprint can analyze  growth impacts on a variety of specific land types (i.e. specific types of agricultural lands, forest or range  lands, or other lands of specific interest), provided that the existing environment is described in  adequate detail. For UrbanFootprint version 1.0, the land consumption module defines land types via a  land type reference dataset compiled from data derived from the California Farmland Mapping and  Monitoring Program (FMMP) and California Protected Areas Database (CPAD) datasets. The land type  reference dataset provides a base year assessment of urban, greenfield, and constrained lands, from  which land consumption can be calculated.
-
-Land Consumption Methodology
-++++++++++++++++++++++++++++
-
-In UrbanFootprint version 1.0, land consumption is defined as the conversion of base year greenfield (undeveloped) land to urban uses. In order for newly-urban change areas to be counted as land  consumed, they must have a residential density greater than 0.5 dwelling unit per acre, and/or an  employment density of greater than 1 employee per acre.  The general process for calculating land consumption in UrbanFootprint version 1.0 is detailed in the  following steps:  Step 1: Join the land type dataset to the net increment table. The land type grid is joined to the net  increment table on their primary keys.  Step 2. Quantify greenfield land consumption using change area definition. To identify where in a new  scenario land consumption occurs, change grid cells are identified through a filtering process. Change  grid cells are identified by whether they are allocated growth via a place type and have greater than 0.5  dwelling units per acre or greater than 1 employee per acre. To identify grid cells that include greenfield  land consumption, change grid cells are further filtered by whether their developable greenfield acreage  is greater than their urban acreage. If there is more developable greenfield acreage than urban, a grid  cell is considered greenfield. Otherwise, it is flagged as containing refill growth. Greenfield land  consumption is then calculated by summing greenfield grid cells in a scenario, as described in the equation below.
-
+Each polygon then has a percentage of it's land area that is developable greenfield space and developable "refill" space. The polygon is then analyzed so that if it has more developable greenfield space than refill any development in the polygon is considered greenfield consumption and if there is more developable refill space than greenfield any development is considered refill. The total acrage of greenfield and refill development is then calculated across the entire scenario.
 
 
 .. image:: graphics/SJVExample.png
