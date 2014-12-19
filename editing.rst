@@ -273,7 +273,47 @@ Layer Management
 Zoom, Pan, and Select
 +++++++++++++++++++++
 
+You'll find the Zoom, Pan, and selection tools, as well as access to the table view and place type editor on a toolbar at the top edge of the map.
+
 .. image:: graphics/ButtonLocation_ZoomPanSelect.svg
+
+Click on this button to zoom to the full extent of the map.
+
+.. image:: graphics/Button_ZoomExtent.svg
+
+Click on this button to zoom to your currently selected features.
+
+.. image:: graphics/Button_ZoomSelection.svg
+
+Click on this button to clear the current selection.
+
+.. image:: graphics/Button_ClearSelection.svg
+
+Click on this button to access the navigation tools so you can zoom and pan without accidentally selecting features.
+
+.. image:: graphics/Button_Navigation.svg
+
+Click on this button to select a single feature by clicking on a single point on the map.
+
+.. image:: graphics/Button_SelectPoint.svg
+
+Click on this button to use a rectangular box to select features on the map. Click and hold the button to draw the rectangle and release the left mouse button to make the selection.
+
+.. image:: graphics/Button_SelectBox.svg
+
+Click on this button to select features using a polygon. Click the left mouse button on the screen to draw a polygon for use in the selection. Each click creates a corner of your polygon. Double click to finish your drawing and make the selection.
+
+.. image:: graphics/Button_SelectPolygon.svg
+
+This button opens a view of the attribute table for the active layer. If there are selected features it shows only the selected features. This replicates much of the functionality of the table view in the top panel.
+
+
+.. image:: graphics/Button_TableView.svg
+
+Click this button to open the place type editor.
+
+.. image:: graphics/Button_PlaceTypeEditor.svg
+
 
 Place Type Editor
 +++++++++++++++++
@@ -523,16 +563,28 @@ Second Example:
 
 It is also possible to use joins. For example if we're looking at a scenario and are viewing the table with nothing selected, we can use a join to bring in informaton from other linked tables (based on the relationships discussed above in layer management). 
 
-In this case, I'm going to join in the "vehicle_miles_traveled" layer and do my selection based on: "vehicle_miles_traveled.vmt_daily_per_capita > 35"
+In this case, I'm going to join in the "wetlands" layer and do my selection based on: "wetlands.wetland_code = '1'"
 
-**Detailed Examples**
+#. Make the Senario End State layer active
+#. Open the top panel (Explore), and switch to the table view
+#. Under join, select wetlands
+#. In Where box paste in **wetlands.wetland_code = '1'**
+#. Click Query
 
-#. Define an area using the polygon selection tool.
-#. Open the query tool, note that it’s copied in the area defined by your box
-#. Where: acres_gross > 5
+Here's what it'll look like when you've set up the query and have just clicked the Query button.
 
-Editing
-_______
+ .. image:: graphics/QuerySelect4.png
+
+And here it is just after completing the selection. Not that all of the polygons in the Endstate Layer that intersect the wetlands layer have been selected.
+
+ .. image:: graphics/QuerySelect5.png
+
+
+Scenario Editing
+----------------
+
+Selecting Polygons to Edit
+__________________________
 
 **Hand Selection (Painting)**
 Manual editing by selecting parcels using one of the selection tools.
@@ -580,7 +632,13 @@ Image here
 Scenario Builder
 ________________
 
-Image here
+.. image:: graphics/ScenarioBuilder_PlaceTypeList.png
+  :height: 400px
+  :align: left
+
+The scenario builder is where you specify the details about the place type that you're about to apply to a set of selected polygons. While you're not changing the fundamentals of the place type (to do that use the Place Type editing tools), you can specify the percentage of the available land that will have the place type applied to it, scale the density of the place type down, and let UrbanFootprint know whether to overwrite any existing place types (full redevelopment) or to use any available vacant space in the polygon for the place type. 
+
+You can select the set of place types you're working with by clicking on the button highlighted in red in the image to the left.
 
 * Development Pct.
 * Density Pct.
@@ -588,14 +646,17 @@ Image here
 * Clear Base Condition
 * Redevelopment Flag
 * Apply
-* Undo
-* Redo
 * Revert
+
 
 Development Percent and Density Percent
 +++++++++++++++++++++++++++++++++++++++
 
 .. image:: graphics/DevPct_DensPct.svg
+
+Development and density percentage controls
+
+.. image:: graphics/ScenarioBuilder_DevP_DensP.svg
 
 Development Pct.:
 
@@ -612,6 +673,10 @@ Gross/Net Percentage
 
 .. image:: graphics/GrossNetPct.svg
 
+Gross/Net Percentage Control
+
+.. image:: graphics/ScenarioBuilder_GrossNet.svg
+
 * Allows assignment of a portion of the space to “No Use”
 * This is used to reserve space for other uses such as drainage, parks, or other infrastructure. 
 * This is applied to the developable percentage.
@@ -625,6 +690,9 @@ Gross/Net Percentage
 Clear Base Condition and Redevelopment Flag
 +++++++++++++++++++++++++++++++++++++++++++
 
+
+.. image:: graphics/ScenarioBuilder_Redev.svg
+
 Clear Base Condition
 
   If selected this removes any prior place type from the parcel.
@@ -637,7 +705,7 @@ Redevelopment Flag
 Applying Land Use
 +++++++++++++++++
 
-Images
+.. image:: graphics/ScenarioBuilder_BeforeApply.png
 
 Applying a land use involves combining the last few points that were presented.
 #. Activate the End State layer
@@ -660,6 +728,10 @@ Select the Place Type
 
 Specify Settings for the Place Type
 
+*Keep an eye on the handy pop-up at the bottom of the screen that tells you how many dwelling units and employees your settings will create."
+
+.. image:: graphics/ScenarioBuilder_BottomRibbon.png
+
 * Development percentage, Density percentage, Gross/Net percentage
 * Clear Base Condition
 
@@ -667,6 +739,8 @@ Specify Settings for the Place Type
 
  * Redevelopment Flag to notify users that redevelopment was applied.
  
+.. image:: graphics/ScenarioBuilder_AfterApply.png
+
 Analysis
 --------
 
