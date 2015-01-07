@@ -204,9 +204,13 @@ TileStache: http://tilestache.org/
 
 * Map tile server (provides the graphical content for maps)
 
-Apache: http://httpd.apache.org/
+Nginx: http://nginx.org/
 
 * Web server
+
+Polymaps: (custom version)
+
+* JS Web Mapping
 
 Django: https://www.djangoproject.com/
 
