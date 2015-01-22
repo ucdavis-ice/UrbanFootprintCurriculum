@@ -531,8 +531,6 @@ First Example:
 
 Assume that you've selected a set of polygons as in the image above. But, you want to refine your selection to include only the polygons that have 'land_use' = 'Blank Place Type'
 
-This can be done using the query options. 
-
 Open the upper panel by clicking on the "Explore" button, and then select the second tab from the very top on the far left (the table icon) to view the table. At this point you should see something similar to the image above if you've selected some parcels from the Existing Land Use Parcels Layer. 
 
 Then, in the where box enter "existing_land_use_parcels.land_use = 'Blank Place Type'" as shown in the picture below making sure that the "Limit Results to Selected Area" box is checked so that the selection will be made from within your existing selection. *Note:* the arrow right next to the where box will help you look up the names of the available fields and insert them into the box.
@@ -545,13 +543,65 @@ Then, click the green "Query" button. You should get a result that looks like th
 
 This selection process is the first step of many actions you may take. One of the most common will be selecting parcels in the "End State Canvas" of a scenario and then applying a place or building type to them.
 
+Note that fields are named with the following structure "tablename"."fieldname". If your query only uses data from a single table, the "tablename" and the following "." can be ommitted safely. If you are using a join (discussed below), you will need to include the table name.
+
+The following comparison/equality operators are supported:
+
+ + Greater than: > 
+ + Less than: <
+ + Greater than or equal to: >=
+ + Less than or equal to: <=
+ + Equals: =
+ + Not equal: !=
+
+When querying strings, the following can be used for querying: (must be capitalized)
+
+ + BEGINS_WITH : String begins with a certain letter or group of letters
+ + ENDS_WITH : String ends with a certain letter or group of letters
+ + CONTAINS: String contains a certain letter or group of letters
+
+Queries can use multiple attributes: (must be capitalized)
+
+ + AND: SQL ‘and’ syntax, attributes must meet both query requirements
+ + OR: SQL ‘or’ syntax, attributes must meet either query requirements
+
+For example the following query could be run on the Scenario End State.
+
+::
+  acres_parcel >= 5 AND acres_developable > 2
+
+Produces a result that looks a lot like the following image. Note that the selection was made from within an existing selection (see the grey box which shows the area previously selected).
+
+.. image:: graphics/QuerySelect6.png
+
+
+Query Options
+_____________
+
+*Results Limited to Selected Area:* If you have already selected a set of polygons this option will be available to you. If it is selected, any selection will be made from the already selected polygons.
+
+*Show Selection Shape on Map:* This will display the shape drawn by the user to perform the selection on top of the highlighed selected parcels.
+
+*Clear:* This removes any existing selection.
+
+*Query:* Execute the query you've created.
+
+
+Aggregation
+___________
+
 Another alternative is performing an "Aggregate Query" on them to get totals.
 
 To do this click on the button on the far left right below the table button on the top panel to switch to the Feature Summary or Aggregate view. 
 
 Then, you can perform summaries of the selected featurs such as calculating the total population or acres, or average acres or count of feature. This supports the use of "Group By" so that, for example, you can get the total number of housing units by land use type.
 
-Here's an example that continues from our previous point. Enter "SUM(existing_land_use_parcels.acres)" in the "Aggregates" box and leave Group By empty. Like before, the downward pointing arrow will give you a list of available fields and insert them.
+Here's an example that continues from our previous point. Enter
+
+::
+  SUM(existing_land_use_parcels.acres)
+
+in the "Aggregates" box and leave Group By empty. Like before, the downward pointing arrow will give you a list of available fields and insert them.
 
  .. image:: graphics/QueryAggregate1.png
 
@@ -559,7 +609,35 @@ That tells us that our selected parcels have a total area of 9.51 acres.
 
  .. image:: graphics/QueryAggregate2.png
 
-Second Example:
+The following aggregate functions are supported:
+
+::
+  SUM(field)
+  COUNT(field)
+  AVG(field)
+  MAX(field)
+  MIN(field)
+
+It is possible to calculate aggregations on more than one field at the same time. Separate each of the aggregate statemens with a comma.
+
+::
+  SUM(field1), SUM(field2), AVG(field1), COUNT(field1)
+
+The example below used the following aggregate query on the selected parcels.
+
+::
+  SUM(scenario_end_state.pop), SUM(scenario_end_state.hh), SUM(scenario_end_state.acres_parcel_res)
+
+Which could also be written as:
+
+::
+  SUM(pop), SUM(hh), SUM(acres_parcel_res)
+
+ .. image:: graphics/QueryAggregate3.png
+
+
+Queries with Table Joins
+________________________
 
 It is also possible to use joins. For example if we're looking at a scenario and are viewing the table with nothing selected, we can use a join to bring in informaton from other linked tables (based on the relationships discussed above in layer management). 
 
@@ -570,6 +648,8 @@ In this case, I'm going to join in the "wetlands" layer and do my selection base
 #. Under join, select wetlands
 #. In Where box paste in **wetlands.wetland_code = '1'**
 #. Click Query
+
+Note: When using a join, you will need to use the "table"."field" structure for identifying fields to ensure that there is no confusion because the same field name could occur in multiple tables.
 
 Here's what it'll look like when you've set up the query and have just clicked the Query button.
 
