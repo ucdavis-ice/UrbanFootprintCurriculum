@@ -373,6 +373,7 @@ Access the charts by clicking on the "explore" button to slide the top panel ope
 .. image:: graphics/Charts.png
 
 Charts:
+
 * Provide immediate feedback on the Scenario
 * By Increment and End State
 * Population, Dwelling Unit, and Employment Totals
@@ -390,9 +391,6 @@ Layer Management
 * No Symbology Editing
 * Export Layers to File Geodatabase
 
-
-
-
 Basic Layer Management
 ______________________
 
@@ -400,9 +398,12 @@ ______________________
 
  * Click on the check box to the left of the layer name
 
- * Active layer
- 
- * Is always highlighted in blue
+* Active layer
+
+ * Make a layer active by clicking on it
+ * The active layer is highlighted in blue
+
+A pen icon at the right end of a layer name indicates that the layer is editable.
 
 
 Layer Ordering
@@ -559,6 +560,8 @@ When querying strings, the following can be used for querying: (must be capitali
  + BEGINS_WITH : String begins with a certain letter or group of letters
  + ENDS_WITH : String ends with a certain letter or group of letters
  + CONTAINS: String contains a certain letter or group of letters
+::
+  land_use BEGINS_WITH 'Blank'
 
 Queries can use multiple attributes: (must be capitalized)
 
@@ -566,7 +569,6 @@ Queries can use multiple attributes: (must be capitalized)
  + OR: SQL ‘or’ syntax, attributes must meet either query requirements
 
 For example the following query could be run on the Scenario End State.
-
 ::
   acres_parcel >= 5 AND acres_developable > 2
 
@@ -597,7 +599,6 @@ To do this click on the button on the far left right below the table button on t
 Then, you can perform summaries of the selected featurs such as calculating the total population or acres, or average acres or count of feature. This supports the use of "Group By" so that, for example, you can get the total number of housing units by land use type.
 
 Here's an example that continues from our previous point. Enter
-
 ::
   SUM(existing_land_use_parcels.acres)
 
@@ -610,7 +611,6 @@ That tells us that our selected parcels have a total area of 9.51 acres.
  .. image:: graphics/QueryAggregate2.png
 
 The following aggregate functions are supported:
-
 ::
   SUM(field)
   COUNT(field)
@@ -619,21 +619,20 @@ The following aggregate functions are supported:
   MIN(field)
 
 It is possible to calculate aggregations on more than one field at the same time. Separate each of the aggregate statemens with a comma.
-
 ::
   SUM(field1), SUM(field2), AVG(field1), COUNT(field1)
 
 The example below used the following aggregate query on the selected parcels.
-
 ::
   SUM(scenario_end_state.pop), SUM(scenario_end_state.hh), SUM(scenario_end_state.acres_parcel_res)
 
 Which could also be written as:
-
 ::
   SUM(pop), SUM(hh), SUM(acres_parcel_res)
 
- .. image:: graphics/QueryAggregate3.png
+And produces an output that looks like:
+
+.. image:: graphics/QueryAggregate3.png
 
 
 Queries with Table Joins
@@ -788,38 +787,28 @@ Applying Land Use
 .. image:: graphics/ScenarioBuilder_BeforeApply.png
 
 Applying a land use involves combining the last few points that were presented.
+
 #. Activate the End State layer
 #. Select the Parcels
-#. Select the Place Type
-#. Adjust Settings
+#. Select the Place Type using the Scenario Builder
+#. Adjust Settings for the Place Type
 
- #. Dev, Density, Gross/net
- #. Clear Base Condition
- #. Redevelopment Flag
+ #. Dev, Density, Gross/net: Specify the intensity with which the Place Type will be applied. 
+ #. Clear Base Condition: Do you want to clear the existing land (redevelopment) or not (infill).
+ #. Redevelopment Flag: track where redevelopment was applied
 
-#. Apply Place Type
+5. Apply Place Type
 
-Select Parcels by hand or query
 
-Select the Place Type
-
-* Use the Scenario Builder
-* It slides out from the right side of the screen under "Analysis"
-
-Specify Settings for the Place Type
-
-*Keep an eye on the handy pop-up at the bottom of the screen that tells you how many dwelling units and employees your settings will create."
+*While setting the densities, keep an eye on the handy pop-up at the bottom of the screen that tells you how many dwelling units and employees your settings will create.*
 
 .. image:: graphics/ScenarioBuilder_BottomRibbon.png
 
-* Development percentage, Density percentage, Gross/Net percentage
-* Clear Base Condition
-
- * Do you want to clear the existing land (redevelopment) or not (infill).
-
- * Redevelopment Flag to notify users that redevelopment was applied.
+The final result:
  
 .. image:: graphics/ScenarioBuilder_AfterApply.png
+
+
 
 Analysis
 --------
