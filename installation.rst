@@ -375,5 +375,16 @@ Do the data import and system setup. (takes 30min+)
 
 You will be asked twice if you want to continue because if you have an existing UrbanFootprint database of the same name it will be completely overwritten by this step.  
 
+Other Useful Items
+==================
 
+Dumping a Database
+------------------
+
+::
+  pg_dump -Fc [database] > [dumpfile]
+
+example:
+::
+  pg_dump - Fc stage_db > yolo_stage.dump  
 
