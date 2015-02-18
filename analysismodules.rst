@@ -34,9 +34,6 @@ Each polygon then has a percentage of it's land area that is developable greenfi
 
 A comparison of the 2050 projections in Scenarios A and B+ from the San Joaquin Valley Blueprint (2009)
 
-
-
-
 Building Energy Use
 -------------------
 
@@ -44,15 +41,37 @@ Building Energy Use
 
 Each building type in UrbanFootprint consumes a baseline amount of energy based on its location and designated policy factors.  Residential energy use is computed based on each dwelling unit, by type, and commercial by their square footage by usage (i.e. retail, office, industrial…).
 
-The location determines which climate zone the building is in, and that determines the baseline energy consumption. 
+The location determines which climate zone the building is in, and that determines the baseline energy consumption. The California Energy Commission's Title 24 Building Standard climate zones are used for residential energy factors and the Forecasting Climate Zones are used for commercial energy use.
+
+TODO: get climate zone map graphic
+
+Baseline residential energy use factors are developed from the CEC's Residential Appliance Saturation Survey (RASS), in this case the 2009 dataset was used. 
+
+TODO: instert Table 9.1 (p153) graphic
+
+Energy use in common areas of mixed use and multifamily structures is estimated based on the CEC's Commercial End-Use Survey (CEUS) data for lodings.
+
+The baseline energy use for commercial structures is developed from the CEUS datasets as Energy Intensity (EI), the energy used per square foot, for 14 building types, classified by CEC Forecasting Climate Zone.
+
+TODO: inster Table 9.3 (P 154)
 
 Baseline energy consumption is assumed to be fixed with the exception of an incremental improvement in efficiency over time.  Buildings present in at the base line year, can have a rate of retrofitting or replacement (with the same building type) which improve those building’s energy efficiency.
 
 New buildings constructed through the scenario have policy driven baseline improvements in energy efficiency and then are also subject to rates of retrofitting and replacement. 
 
+TODO: Insert Table 9.5
+
 Energy policy options are implemented through applying rates of improvement in baseline efficiency to buildings that are either new construction or are retrofitted, with new construction (or major retrofits) being a full update to the projected energy efficiency at the time of construction and retrofits being a significant improvement over the baseline efficiency that the building had prior to retrofit.
 
-After generating total energy used, assumed costs for electricity and natural gas can be applied allowing the calculation of energy costs.
+TODO: Insert graphic of Table 9.4, also get live version of the spreadsheet for inclusion as an example.
+
+After generating total energy used, assumed costs for electricity and natural gas can be applied allowing the calculation of energy costs. Similarly, based on the energy consumed and the potential sources of that energy GHG emissions may be calculated. 
+
+TODO: table 9.6
+
+The calculations that determine the number and age of units or commercial use follow two paths:
+* Existing units experience retrofits and upgrades based on the start year energy efficiency. Replacements of these units move to the new unit queue reducing the number of units being tracked as part of the existing stock.
+* New units are tracked and have the potential for both replacement and retrofit as time passes. 
 
 .. image:: graphics/SACOG_BuildingEnergy.png
 
@@ -60,9 +79,26 @@ Water Use
 ---------
 
 * Water impacts follow a very similar path to Energy.
-* Building type and climate zone determine water used both indoor and outdoor
+* Building type and climate zone determine baseline water used both indoor and outdoor
 * Indoor water usage is estimated per-capita by building type
+  * Residential
+TODO: Table 10.1
+  * Commercial is esteimated based on three employment types, commercial, institutional, and industrial.
+
 * Outdoor water usage is estimated per square foot of irrigated outdoor space adjusted by the climate zone. 
+  * Within 18 climate zones (Figure 10-1) the California DWR provides monthly and yearly ETo (reference Evapotranspiration values). These are a measure of the amount of water needed to support landscaping. Based on these, we can estimate the water required per acre of landscape.
+  
+TODO Table 10.2
+TODO Table 10.3
+
+* Consumption rates are then adjusted to account for efficiency and conservation improvements in future years.
+  * Like Energy, water consumption by buildings assumes rates of efficiency improvements as well as retrofitting or building replacements or major renovations.
+TODO Table 10.4 and also spreadsheet for examples
+
+The calculations that determine the number and age of units or commercial use follow two paths:
+* Existing units experience retrofits and upgrades based on the start year energy efficiency. Replacements of these units move to the new unit queue reducing the number of units being tracked as part of the existing stock.
+* New units are tracked and have the potential for both replacement and retrofit as time passes.
+
 
 Water-Energy
 ------------
