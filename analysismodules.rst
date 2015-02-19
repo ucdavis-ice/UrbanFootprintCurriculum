@@ -43,31 +43,31 @@ Each building type in UrbanFootprint consumes a baseline amount of energy based 
 
 The location determines which climate zone the building is in, and that determines the baseline energy consumption. The California Energy Commission's Title 24 Building Standard climate zones are used for residential energy factors and the Forecasting Climate Zones are used for commercial energy use.
 
-TODO: get climate zone map graphic
+.. image:: graphics/UF_TD_climatezones.png
 
 Baseline residential energy use factors are developed from the CEC's Residential Appliance Saturation Survey (RASS), in this case the 2009 dataset was used. 
 
-TODO: instert Table 9.1 (p153) graphic
+.. image:: graphics/UF_TD_9.1.png
 
 Energy use in common areas of mixed use and multifamily structures is estimated based on the CEC's Commercial End-Use Survey (CEUS) data for lodings.
 
 The baseline energy use for commercial structures is developed from the CEUS datasets as Energy Intensity (EI), the energy used per square foot, for 14 building types, classified by CEC Forecasting Climate Zone.
 
-TODO: inster Table 9.3 (P 154)
+.. image:: graphics/UF_TD_9.3.png
 
 Baseline energy consumption is assumed to be fixed with the exception of an incremental improvement in efficiency over time.  Buildings present in at the base line year, can have a rate of retrofitting or replacement (with the same building type) which improve those building’s energy efficiency.
 
 New buildings constructed through the scenario have policy driven baseline improvements in energy efficiency and then are also subject to rates of retrofitting and replacement. 
 
-TODO: Insert Table 9.5
+.. image:: graphics/UF_TD_9.5.png
 
 Energy policy options are implemented through applying rates of improvement in baseline efficiency to buildings that are either new construction or are retrofitted, with new construction (or major retrofits) being a full update to the projected energy efficiency at the time of construction and retrofits being a significant improvement over the baseline efficiency that the building had prior to retrofit.
 
-TODO: Insert graphic of Table 9.4, also get live version of the spreadsheet for inclusion as an example.
+.. image:: graphics/UF_TD_9.4.png
 
 After generating total energy used, assumed costs for electricity and natural gas can be applied allowing the calculation of energy costs. Similarly, based on the energy consumed and the potential sources of that energy GHG emissions may be calculated. 
 
-TODO: table 9.6
+.. image:: graphics/UF_TD_9.6.png
 
 The calculations that determine the number and age of units or commercial use follow two paths:
 * Existing units experience retrofits and upgrades based on the start year energy efficiency. Replacements of these units move to the new unit queue reducing the number of units being tracked as part of the existing stock.
@@ -82,18 +82,26 @@ Water Use
 * Building type and climate zone determine baseline water used both indoor and outdoor
 * Indoor water usage is estimated per-capita by building type
   * Residential
-TODO: Table 10.1
+
+.. image:: graphics/UF_TD_10.1.png
+
   * Commercial is esteimated based on three employment types, commercial, institutional, and industrial.
 
+.. image:: graphics/etozonemap.jpg
+
 * Outdoor water usage is estimated per square foot of irrigated outdoor space adjusted by the climate zone. 
-  * Within 18 climate zones (Figure 10-1) the California DWR provides monthly and yearly ETo (reference Evapotranspiration values). These are a measure of the amount of water needed to support landscaping. Based on these, we can estimate the water required per acre of landscape.
+  * Within 18 climate zones the California DWR provides monthly and yearly ETo (reference Evapotranspiration values). These are a measure of the amount of water needed to support landscaping. Based on these, we can estimate the water required per acre of landscape.
   
-TODO Table 10.2
-TODO Table 10.3
+.. image:: graphics/UF_TD_10.2.png
+
+.. image:: graphics/UF_TD_10.3.1.png
+
+.. image:: graphics/UF_TD_10.3.2.png
 
 * Consumption rates are then adjusted to account for efficiency and conservation improvements in future years.
   * Like Energy, water consumption by buildings assumes rates of efficiency improvements as well as retrofitting or building replacements or major renovations.
-TODO Table 10.4 and also spreadsheet for examples
+
+  .. image:: graphics/UF_TD_10.4.png
 
 The calculations that determine the number and age of units or commercial use follow two paths:
 * Existing units experience retrofits and upgrades based on the start year energy efficiency. Replacements of these units move to the new unit queue reducing the number of units being tracked as part of the existing stock.
@@ -112,9 +120,7 @@ Local Fiscal Impacts
 	:align: left
 	:width: 300 px
 
-
-
-Fiscal impact analysis divides the build landscape across two axes. Urban, compact, or standard developments (Land Development Class or LDC) and refill or greenfield construction.
+Fiscal impact analysis divides the build landscape across three axes. Urban, compact, or standard developments (Land Development Class or LDC), refill or greenfield construction (development condition), and housing type (single family detached large lot, single family detached small lot, single family attached, and multi-family. This version of the fiscal analytis module applies only to residential development.
 
 .. image:: graphics/AM_LocalFiscal2.png
 	:align: right
@@ -124,11 +130,17 @@ Urban is high density development characterized by city centers
 Compact is a highly walkable, mixed use urban form
 Standard includes most suburban, auto-oriented construction.
  
-Infrastructure costs are calculated per residential unit by type, LDC, and greenfield or refill type  [and per square foot of commercial by type] Need clarification. Infrastructure costs are assumed to be a one time cost. And include the installation of transportation, water, and wastewater facilities.
+Infrastructure costs are calculated per residential unit by type, LDC, and greenfield or refill type. Infrastructure costs are assumed to be a one time cost. And include the installation of transportation, water, and wastewater facilities.
+
+.. image:: graphics/UF_TD_12.3.png
 
 Operations & Maintenance costs are long term infrastrucutre related costs assessed over time on a per residential unit basis by building type and LDC. 
 
-Local Renues include the projected property tax, property transfer, and vehicle license fees based on the building type and LDC. I.e. Urban areas have lower vehicle ownership and the estimates reflect that in the vehicle license fees. 
+.. image:: graphics/UF_TD_12.5.png
+
+Local Renues include the projected property tax, property transfer, and vehicle license fees based on the building type and LDC. i.e. Urban areas have lower vehicle ownership and the estimates reflect that in the vehicle license fees. 
+
+.. image:: graphics/UF_TD_12.6.png
 
 Transportation
 --------------
