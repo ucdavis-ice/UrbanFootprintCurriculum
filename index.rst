@@ -24,6 +24,7 @@ Contents:
    editing
    datapreparation
    analysismodules
+   training
    contributors
 
 
