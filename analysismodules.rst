@@ -87,7 +87,7 @@ Water Use
 
 .. image:: graphics/UF_TD_10.1.png
 
-  * Commercial is estimated based on three employment types, commercial, institutional, and industrial.
+* Commercial is estimated based on three employment types, commercial, institutional, and industrial.
 
 .. image:: graphics/etozonemap.jpg
 
