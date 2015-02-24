@@ -70,6 +70,7 @@ After generating total energy used, assumed costs for electricity and natural ga
 .. image:: graphics/UF_TD_9.6.png
 
 The calculations that determine the number and age of units or commercial use follow two paths:
+
 * Existing units experience retrofits and upgrades based on the start year energy efficiency. Replacements of these units move to the new unit queue reducing the number of units being tracked as part of the existing stock.
 * New units are tracked and have the potential for both replacement and retrofit as time passes. 
 
@@ -81,6 +82,7 @@ Water Use
 * Water impacts follow a very similar path to Energy.
 * Building type and climate zone determine baseline water used both indoor and outdoor
 * Indoor water usage is estimated per-capita by building type
+  
   * Residential
 
 .. image:: graphics/UF_TD_10.1.png
@@ -89,7 +91,8 @@ Water Use
 
 .. image:: graphics/etozonemap.jpg
 
-* Outdoor water usage is estimated per square foot of irrigated outdoor space adjusted by the climate zone. 
+* Outdoor water usage is estimated per square foot of irrigated outdoor space adjusted by the climate zone.
+ 
   * Within 18 climate zones the California DWR provides monthly and yearly ETo (reference evapotranspiration values). These are a measure of the amount of water needed to support landscaping. Based on these, we can estimate the water required per acre of landscape.
   
 .. image:: graphics/UF_TD_10.2.png
@@ -99,19 +102,16 @@ Water Use
 .. image:: graphics/UF_TD_10.3.2.png
 
 * Consumption rates are then adjusted to account for efficiency and conservation improvements in future years.
+
   * Like Energy, water consumption by buildings assumes rates of efficiency improvements as well as retrofitting or building replacements or major renovations.
 
   .. image:: graphics/UF_TD_10.4.png
 
 The calculations that determine the number and age of units or commercial use follow two paths:
+
 * Existing units experience retrofits and upgrades based on the start year energy efficiency. Replacements of these units move to the new unit queue reducing the number of units being tracked as part of the existing stock.
 * New units are tracked and have the potential for both replacement and retrofit as time passes.
 
-
-Water-Energy
-------------
-
-Needs detail
 
 Local Fiscal Impacts
 --------------------
@@ -304,7 +304,11 @@ Public Health
 
 .. image:: graphics/AM_PublicHealth.png
 
+The public health module is undering a major redesign at the moment. 
+
 The public health module builds on the transportation model as well as the baseline scenario.  Demographic assumptions combined with the local environment are used to forecast the amount of time spent in moderate and vigorous activity, proportion of the population that is overweight, and time spent in cars. These are then used to identify the incidence of weight and activity related diseases and resulting costs.
 
 The transportation engine provides estimates of VMT and pollutants which are used to estimate pedestrian-auto collisions and respiratory illnesses, and the related costs from each.
+
+
 
