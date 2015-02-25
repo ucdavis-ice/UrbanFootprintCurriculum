@@ -526,6 +526,7 @@ Query based selection is a slightly more advanced operation that requires basic 
 The operation selects features in the Active Layer based on a query that you provide.
 
 Query interface:
+
 .. image:: graphics/QuerySelect1.png
 
 First Example:
@@ -560,6 +561,7 @@ When querying strings, the following can be used for querying: (must be capitali
  + BEGINS_WITH : String begins with a certain letter or group of letters
  + ENDS_WITH : String ends with a certain letter or group of letters
  + CONTAINS: String contains a certain letter or group of letters
+
 ::
   land_use BEGINS_WITH 'Blank'
 
