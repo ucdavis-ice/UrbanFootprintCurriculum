@@ -61,12 +61,16 @@ AWS Security Profile
 ++++++++++++++++++++
 
 Inbound traffic:
- 
-**Type         Protocol    Port Range  Source**
-SSH          TCP         22          0.0.0.0/0
-HTTP         TCP         80          0.0.0.0/0
-Custom TCP   TCP         8081        0.0.0.0/0
 
++----------+-----------+------------+-----------+
+|Type      |Protocol   |Port Range  |Source     |
++==========+===========+============+===========+
+|SSH       |TCP        |22          |0.0.0.0/0  |
++----------+-----------+------------+-----------+
+|HTTP      |TCP        |80          |0.0.0.0/0  |
++----------+-----------+------------+-----------+
+|Custom TCP|TCP        |8081        |0.0.0.0/0  |
++----------+-----------+------------+-----------+
 
 These settings are worth reviewing with your system administrator.
 It would be a good idea to restrict the SSH sources to an IP range that exists within your organization for improved security. The same is true of the Custom TCP o n Port 8081 if you're assigning an IP address directly to the machine or paying for a fixed one from Amazon. 
