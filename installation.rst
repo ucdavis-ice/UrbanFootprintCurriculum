@@ -80,15 +80,42 @@ All traffic and all protocols on all ports to all destinations are open. i.e. th
 Create Instance
 +++++++++++++++
 
-Ubuntu 14.04LTS 64 Bit
+**Step 1: Choose AMI**
+
+Ubuntu 14.04LTS 64 Bit (select the Hardware Virtual Machine or HVM version). 
+
+**Step 2: Choose Instance Type**
 
 A *m3.2xlarge* instance seems to work well, and at present has a cost of $0.56 per hour (which may change).
 
 Note: I have run it on a m3.large instance and the reduced number of cpus and ram. It is possible, and is cheaper, but is not as effective as the larger instance if you need to run any of the complex analytical modules.  
 
-No extra storage (it could be added later). 
+**Step 3: Configure Instance**
+
+No changes from the defaults 
+
+**Step 4: Add Storage**
+
+Extra storage is not essential, but the M3.2xl has 8 GB of EBS storage. In recent installs, I've been coming close to this limit and adding more may be worth while. Current pricing for General Purpose EBS is About $0.10 per GB per month. In some of my examples, I've increased the storage to 16GB.
+
+**Step 5: Tag Instance**
+
+Give the machine a Name by entering a name in the value to the right of the Name box.
+
+**Step 6: Configure Security Group**
 
 Select the security profile set up in the previous step.
+
+Choose the *Select an existing security group.* Then pick the group that you created earlier.
+
+**Step 7: Review Instance Launch**
+
+You will get two warnings.
+
+The first is that your instance is not eligible for the Free Tier of usage (i.e. it will cost money to run)
+
+The second is that your instance is open to the world. Anyone will be able to connect to your instance if they have a user name and password using the web. In general we want this, but if you plan to use it internally, work with your IT staff to refine the security group settings to limit access to your office.
+
 
 Initialize the instance.
  
@@ -103,6 +130,22 @@ ______________
 
 Log in to your server using a SSH terminal connection. Make sure that you have "sudo" (administrative) permissions.
 
+Using PuTTY:
+
+Open putty, copy the Public IP address from teh Instance into the "Host Name (or IP address)" box. Leave port 22 as is.
+
+Under Saved sessions, Type in a name for the connection profile you're creating, and click Save.
+
+On the left side, expand the "Connection" section, and then the "SSH".
+
+Under "Auth", browse for and find the Private Key file that you created above.
+
+Then go back up to the "Session" click on the name that you selected before, and click "Save" again to save the location of the key.
+
+Now, click "Open" and accept the "Server Host key not cached..." message by clicking Yes or accept.
+
+Each time you start the instance, you will need to update the IP address, and accept the "Server Host Key" message.
+
 Step 2: Install git
 ___________________
 The first significant installation step is to make sure that you have the "git" installed. Git will be used to connect to the the source of all of the code for operating UrbanFootprint and the instructions for its configuration.
@@ -114,17 +157,19 @@ You will be asked to approve the installation. Enter Y+return to do so.
 Step 3: Clone the repository
 ____________________________
 
-This will create a local copy of the source code and instructions used by the computer to install it on your local computer.
+This will create a local copy of the source code (aka, cloning the repository) and instructions used by the computer to install it on your local computer.
 ::
   git clone https://bitbucket.org/calthorpe/urbanfootprint.git 
 
 You will be asked for your bitbucket account name and password
 
+Downloading the materials might take a few minutes.
+
 If you type:
 ::
   ls
 
-You will now see an additonal item listed in the "home" folder of the account you're logged in with called "urbanfootprint"
+You will now see an additional item listed in the "home" folder of the account you're logged in with called "urbanfootprint." It will probably be blue text (in PuTTY) indicatign that it is actually a folder.
 
 
 Step 4: Run the installation script
@@ -133,8 +178,11 @@ ___________________________________
 This step will run the installation of UrbanFootprint. It will take ~1hour to run, but will need some input from you near the beginning.
 ::
   cd urbanfootprint
+  
+*A shortcut: you can type in "cd urb" and then hit TAB to autocomplete. Doing this you only need to type in enough characters to unambiguously identify the folder/file that you want. i.e. if the folder is empty, you could type "cd u" then TAB.
 
-This will change your directory to the urbanfootprint directory created in the previous step.
+This will change your directory to the urbanfootprint directory created by cloning the repository.
+
 ::
   sudo ./setup.sh
 
@@ -235,6 +283,11 @@ I recommend using FileZilla (or similar SFTP capable FTP Client) to get your dat
 Establish a connection profile, and specify the use of the username (ubuntu for an EC2 instance) and making sure that your pageant install is loading the ssh key. 
 
 Transfer the <filename>.dump file to the server
+
+An alternative is:
+
+::
+  curl http://downloads.ice.ucdavis.edu/~neroth/uf/yolo_stage_db.dump
 
 Step 9: Create a staging database
 _________________________________
