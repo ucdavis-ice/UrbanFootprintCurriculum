@@ -96,7 +96,7 @@ No changes from the defaults
 
 **Step 4: Add Storage**
 
-Extra storage is not essential, but the M3.2xl has 8 GB of EBS storage. In recent installs, I've been coming close to this limit and adding more may be worth while. Current pricing for General Purpose EBS is About $0.10 per GB per month. In some of my examples, I've increased the storage to 16GB.
+Extra storage is not essential, but the M3.2xl has only 8 GB of persistent EBS storage. In recent installs, I've been coming close to this limit and adding more may be worth while. Current pricing for General Purpose EBS is About $0.10 per GB per month. In some of my examples, I've increased the storage to 16GB.
 
 **Step 5: Tag Instance**
 
@@ -182,7 +182,6 @@ This step will run the installation of UrbanFootprint. It will take ~1hour to ru
 *A shortcut: you can type in "cd urb" and then hit TAB to autocomplete. Doing this you only need to type in enough characters to unambiguously identify the folder/file that you want. i.e. if the folder is empty, you could type "cd u" then TAB.
 
 This will change your directory to the urbanfootprint directory created by cloning the repository.
-
 ::
   sudo ./setup.sh
 
