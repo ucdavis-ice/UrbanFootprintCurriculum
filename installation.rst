@@ -63,6 +63,7 @@ AWS Security Profile
 Inbound traffic: 
 ===========  ==========  ==========  =========
 Type         Protocol    Port Range  Source
+===========  ==========  ==========  =========
 SSH          TCP         22          0.0.0.0/0
 HTTP         TCP         80          0.0.0.0/0
 Custom TCP   TCP         8081        0.0.0.0/0
