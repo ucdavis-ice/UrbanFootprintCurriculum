@@ -60,7 +60,8 @@ http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
 AWS Security Profile
 ++++++++++++++++++++
 
-Inbound traffic: 
+Inbound traffic:
+ 
 ===========  ==========  ==========  =========
 Type         Protocol    Port Range  Source
 ===========  ==========  ==========  =========
