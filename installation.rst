@@ -16,6 +16,9 @@ These commands can generally be cut and pasted into the command line.
 
 *Each line that appears in a section of code should be entered as an individual line, executed, and then the next line should be entered and executed.*
 
+<Password> Indicates that you should enter the password for the appropriate account. Contact Evan Babb or Nathaniel Roth for the default password used internally. Because connections to the terminal the Amazon EC2 systems require a ssh key the virtual machines should be relatively safe from administrative access, but posting passwords on the internet is generally poor practice.
+
+
 Setup
 -----
 These instructions assume that you've got an Ubuntu 14.04LTS server that has just been created. They have been tested on Amazon Web Services EC2 instances.
@@ -306,7 +309,7 @@ Switch to the calthorpe user.
 ::
   su calthorpe
 
-And enter the calthorpe password: Calthorpe123
+And enter the calthorpe password: <Password>
 
 Activate the virtual environment
 ::
@@ -397,7 +400,7 @@ Look for a section that like: (approximatley line 45, use Ctrl+C to show the lin
         host = 'localhost',
         database = 'stage_db',
         user = 'calthorpe',
-        password = 'Calthorpe123'
+        password = '<Password>'
       )
 
 Edit the host = and database = to point to 'localhost', and the name of your staging database resepectively (so they may look like the example above)
@@ -435,7 +438,49 @@ Do the data import and system setup. (takes 30min+)
 ::
   fab amazon_local recreate_dev
 
-You will be asked twice if you want to continue because if you have an existing UrbanFootprint database of the same name it will be completely overwritten by this step.  
+You will be asked twice if you want to continue because if you have an existing UrbanFootprint database of the same name it will be completely overwritten by this step. 
+
+Step 12. Final Settings and System Checks
+_________________________________________
+
+Check that the Postgresql setup is configured to respond to requests from Tilestache
+::
+  sudo nano /etc/postgresql/9.3/main/pg_hba.conf
+
+Scroll down to the bottom, and look to see if the line
+::
+  local   all             tilestache                              trust
+  
+Is above or below:
+:: 
+  local   all             all                                     peer
+
+If the tilestache line is not above the other, edit the file so that it looks like:
+::
+  # TYPE  DATABASE        USER            ADDRESS                 METHOD
+  # "local" is for Unix domain socket connections only
+  local   all             tilestache                              trust
+  local   all             all                                     peer
+  # IPv4 local connections:
+  host    all             all             127.0.0.1/32            md5
+  # IPv6 local connections:
+  host    all             all             ::1/128                 md5
+  # Allow replication connections from localhost, by a user with the
+  # replication privilege.  
+  #local   replication     postgres                                peer
+  #host    replication     postgres        127.0.0.1/32            md5
+  #host    replication     postgres        ::1/128                 md5
+
+Then save the file and exit. Restart postgresql
+::
+  sudo service postgresql restart
+
+Step 13. Log In
+_______________
+
+Copy the IP address from your Amazon EC2 control console and paste it into the address window of a web browser (Chrome seems to be the preferred one). 
+
+Your log in will be the first name that was entered in the administrator box, and the password will be that "<firstname>@uf" 
 
 Other Useful Items
 ------------------
@@ -450,3 +495,47 @@ example:
 ::
   pg_dump - Fc stage_db > yolo_stage.dump  
 
+
+Checking Service Status
+_______________________
+
+type:
+::
+  sudo supervisorctl status
+
+You can replace "status" with "restart" to restart the primary services.
+
+Log Files
+_________
+
+Log files for most of UrbanFootprint are in:
+::
+  /var/log/supervisor/
+
+You'll need to use sudo to access them.
+::
+  sudo nano /var/log/supervisor/celery.log  
+
+Connect to the Postgres Database Using PGAdmin
+______________________________________________
+
+**This requires extreme caution** When connecting directly to the database you could corrupt it badly.
+
+When you're setting up your PuTTY connection to the server, you can set up a tunnel by:
+1. Select "Connection" in the left panel
+2. Select SSH
+3. Select Tunnels
+4. Source Port: Enter a port number (5432 is the standard for a local postgres install, I suggest picking 5433 or another one that you have not used already)
+5. Destination: localhost:5432
+
+Remember to go back to Session and save your tunnel configuration to your saved session
+
+Connect to your UF machine using that saved session.
+
+Open PGAdmin.
+Create a new server connection.
+* Name: <pick a descriptive name>
+* Host: localhost
+* Port: the source port that you entered above
+* Username: calthorpe
+* Password: <Password> 
