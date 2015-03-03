@@ -238,11 +238,11 @@ To create a link between the configuration settings copy we made and the file na
 
 Step 6: Add yourself as an administrator
 ________________________________________
-We need to edit the local_settings.py file to add you as an administrator.
+We need to edit the settings.py file to add you as an administrator.
 ::
-  nano local_settings.py
+  nano settings.py
 
-Then use the arrow keys to scroll all the way to the bottom. Insert the following after the last line in the file.
+Then use the arrow keys to scroll to the ADMINS section. Insert the following after the last line in the list (and remove the others if desired).
 ::
   ADMINS = (
     ('Your Name', 'you@example.com'),
@@ -252,7 +252,7 @@ use the arrow keys to update your name and email leaving the quotes.
 
 Exit by using Ctrl+x, and then typing Y when asked to save the file.
 
-Your user name is your name, and default password is <username>@uf
+Your user name is your name, and default password is <firstname>@uf
 
 Step 7: Check the services
 __________________________
