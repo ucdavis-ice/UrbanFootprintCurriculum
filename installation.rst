@@ -100,7 +100,7 @@ No changes from the defaults
 
 **Step 4: Add Storage**
 
-Extra storage is not essential, but the M3.2xl has only 8 GB of persistent EBS storage. In recent installs, I've been coming close to this limit and adding more may be worth while. Current pricing for General Purpose EBS is About $0.10 per GB per month. In some of my examples, I've increased the storage to 16GB.
+The M3.2xl has only 8 GB of persistent EBS storage. In recent installs, I've been hitting this limit and adding is worth while. Current pricing for General Purpose EBS is About $0.10 per GB per month. In some of my examples, I've increased the storage to 16GB.
 
 **Step 5: Tag Instance**
 
@@ -136,7 +136,7 @@ Log in to your server using a SSH terminal connection. Make sure that you have "
 
 Using PuTTY:
 
-Open putty, copy the Public IP address from teh Instance into the "Host Name (or IP address)" box. Leave port 22 as is.
+Open putty, copy the Public IP address from the Instance into the "Host Name (or IP address)" box. Leave port 22 as is.
 
 Under Saved sessions, Type in a name for the connection profile you're creating, and click Save.
 
@@ -149,6 +149,8 @@ Then go back up to the "Session" click on the name that you selected before, and
 Now, click "Open" and accept the "Server Host key not cached..." message by clicking Yes or accept.
 
 Each time you start the instance, you will need to update the IP address, and accept the "Server Host Key" message.
+
+When asked for a username on the AWS virtual machine, use: *ubuntu*
 
 Step 2: Install git
 ___________________
@@ -283,14 +285,13 @@ ____________________________________
 
 I recommend using FileZilla (or similar SFTP capable FTP Client) to get your data onto the server.
 
-Establish a connection profile, and specify the use of the username (ubuntu for an EC2 instance) and making sure that your pageant install is loading the ssh key. 
+Establish a connection profile, and specify the use of the username (ubuntu for an EC2 instance) and make sure that your pageant install is loading the correct ssh key. 
 
 Transfer the <filename>.dump file to the server
 
 An alternative is:
-
 ::
-  curl http://downloads.ice.ucdavis.edu/~neroth/uf/yolo_stage_db.dump
+  curl -O http://downloads.ice.ucdavis.edu/~neroth/uf/yolo_stage_db.dump
 
 Step 9: Create a staging database
 _________________________________
@@ -335,9 +336,9 @@ Add the postgis extension to stage_db
 
 Then import the database dump to the staging database.
 ::
-  pg_restore -d stage_db /home/ubuntu/UF_yolo_data.dump
+  pg_restore -d stage_db /home/calthorpe/yolo_stage_db.dump
 
-This is assuming the data you're loading is in a file called UF_yolo_data.dump and that it is in the home directory of the ubuntu user. Adjust the path to the dump file as needed.
+This is assuming the data you're loading is in a file called UF_yolo_data.dump and that it is in the home directory of the calthorpe user. Adjust the path to the dump file as needed.
 
 Step 10. Prepare for data import 
 ________________________________
@@ -419,9 +420,12 @@ Specify the client name and settings (takes about 2min.)
 ::
   fab amazon_local client:sacog
 
+*Note: Tilestache will show an error message if the spatial data has not been loaded previouisly.*
+
 Import the staging database settings (takes about 2min.)
 ::
   fab amazon_local local_settings:stage
+*Note: Tilestache will show an error message if the spatial data has not been loaded previouisly.*
 
 Do a code update. This is an abbreviated version of the installation that we did earlier. (takes about 2 min.)
 ::
