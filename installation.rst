@@ -488,6 +488,7 @@ Other Useful Items
 Dumping a Database
 __________________
 
+To dump a database:
 ::
   pg_dump -Fc [database] > [dumpfile]
 
