@@ -7,6 +7,8 @@ ______________________
 
 **Technical Level:** Low
 
+**Subjects:**
+
 30 Minutes:
 Introduction to UrbanFootprint :ref:`Link <ufintro>` (PPT)
 
@@ -15,6 +17,8 @@ Training for Scenario Editors
 _____________________________
 
 **Technical Level:** Medium
+
+**Subjects:**
 
 30 Minutes:
 Introduction to UrbanFootprint :ref:`Link <ufintro>` (PPT)
@@ -33,6 +37,8 @@ Installing UrbanFootprint
 
 **Technical Level:** Very High
 
+**Subjects:**
+
 1:00 (3:00+ to complete an installation)
 Installation :ref:`Link <installation>`
 
@@ -40,6 +46,8 @@ Base Data Creation
 ++++++++++++++++++
 
 **Technical Level:** Very High
+
+**Subjects:**
 
 1:00
 Data Preparation :ref:`Link <dataprep>` (PPT)
@@ -53,6 +61,8 @@ Analytical Modules
 
 **Technical Level:** High
 
+**Subjects:**
+
 1:00
 Analysis Modules :ref:`Link <analysismods>` (PPT)
 
@@ -60,6 +70,7 @@ Analysis Modules :ref:`Link <analysismods>` (PPT)
 ________________
 
 **Intended Audience:** Land use planners, transportation planners, GIS staff
+
 **Technical Level:** High - very high
 
 The two day curriculum prepares a user to understand how to use UrbanFootprint for defining, editing, and evaluating scenarios. The focus is on the scenario planing applications of UrbanFootprint and the specific tasks that need to be accomplished in order to build a scenario from base data. 
@@ -68,6 +79,8 @@ The students will gain an understanding of what scenario planning is, and why it
 
 Day 1
 +++++
+
+**Subjects:**
 
 30 Minutes:
 Introduction to UrbanFootprint :ref:`Link <ufintro>` (PPT)
@@ -86,6 +99,8 @@ Discussion and Additional Hands-on time.
 
 Day 2
 +++++
+
+**Subjects:**
 
 1:00 (3:00+ to complete an installation)
 Installation :ref:`Link <installation>`
@@ -111,6 +126,8 @@ _________________
 
 The three hour curriculum is intended to familiarize the students with what UrbanFootprint is, how it can be used for scenario planning, and familiarize the student with the process in a hands-on experience. 
 Brief notes will be given on the installation of UrbanFootprint and on base data creation, but these topics will not be covered in detail. 
+
+**Subjects:**
 
 30 Minutes:
 Introduction to UrbanFootprint :ref:`Link <ufintro>` (PPT)
