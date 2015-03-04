@@ -5,7 +5,7 @@ Training Suggestions
 Informational Briefing
 ______________________
 
-Technical Level: Low
+**Technical Level:** Low
 
 30 Minutes:
 Introduction to UrbanFootprint :ref:`Link <ufintro>` (PPT)
@@ -14,7 +14,7 @@ Introduction to UrbanFootprint :ref:`Link <ufintro>` (PPT)
 Training for Scenario Editors
 _____________________________
 
-Technical Level: Medium
+**Technical Level:** Medium
 
 30 Minutes:
 Introduction to UrbanFootprint :ref:`Link <ufintro>` (PPT)
@@ -31,7 +31,7 @@ __________________
 Installing UrbanFootprint
 +++++++++++++++++++++++++
 
-Technical Level: Very High
+**Technical Level:** Very High
 
 1:00 (3:00+ to complete an installation)
 Installation :ref:`Link <installation>`
@@ -39,7 +39,7 @@ Installation :ref:`Link <installation>`
 Base Data Creation
 ++++++++++++++++++
 
-Technical Level: Very High
+**Technical Level:** Very High
 
 1:00
 Data Preparation :ref:`Link <dataprep>` (PPT)
@@ -51,7 +51,7 @@ Hands on experience (Sample Data)
 Analytical Modules
 ++++++++++++++++++
 
-Technical Level: High
+**Technical Level:** High
 
 1:00
 Analysis Modules :ref:`Link <analysismods>` (PPT)
@@ -59,8 +59,8 @@ Analysis Modules :ref:`Link <analysismods>` (PPT)
 2 Day Curriculum
 ________________
 
-Intended Audience: Land use planners, transportation planners, GIS staff
-Technical Level: High - very high
+**Intended Audience:** Land use planners, transportation planners, GIS staff
+**Technical Level:** High - very high
 
 The two day curriculum prepares a user to understand how to use UrbanFootprint for defining, editing, and evaluating scenarios. The focus is on the scenario planing applications of UrbanFootprint and the specific tasks that need to be accomplished in order to build a scenario from base data. 
 
@@ -105,9 +105,9 @@ Conclusion and Discussion
 3 Hour Curriculum
 _________________
 
-Intended Audience: Land use planners, transportation planners, GIS staff, other interested individuals.
+**Intended Audience:** Land use planners, transportation planners, GIS staff, other interested individuals.
 
-Technical Level: Medium
+**Technical Level:** Medium
 
 The three hour curriculum is intended to familiarize the students with what UrbanFootprint is, how it can be used for scenario planning, and familiarize the student with the process in a hands-on experience. 
 Brief notes will be given on the installation of UrbanFootprint and on base data creation, but these topics will not be covered in detail. 
@@ -118,7 +118,7 @@ Introduction to UrbanFootprint :ref:`Link <ufintro>` (PPT)
 1:00 hours:
 Scenario Editing :ref:`Link <editing>` (PPT)
 
-30 Minutes
+30 Minutes: 
 Analysis Modules :ref:`Link <analysismods>` (PPT)
 
 1:00
