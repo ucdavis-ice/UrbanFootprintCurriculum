@@ -54,14 +54,14 @@ Analytical Modules
 Technical Level: High
 
 1:00
-Analysis Modules :ref:`Link <analysismod>` (PPT)
+Analysis Modules :ref:`Link <analysismods>` (PPT)
 
 2 Day Curriculum
 ________________
 
 Intended Audience: Land use planners, transportation planners, GIS staff
 
-The two day curriculum prepares a user to understand how to use UrbanFootprint for defining, editing, and evaluating scenarios. The focus is on the scenario planing applications of UrbanFootprint and the specific tasks that need to be accomplished inorder to build a scenario from base data. 
+The two day curriculum prepares a user to understand how to use UrbanFootprint for defining, editing, and evaluating scenarios. The focus is on the scenario planing applications of UrbanFootprint and the specific tasks that need to be accomplished in order to build a scenario from base data. 
 
 The students will gain an understanding of what scenario planning is, and why it is done. They will be trained in how to apply those lessons to the creation of a scenario in a hands-on environment. As part of this training an overview of the analytical modules, base data creation, and the installation and deployment process of UrbanFootprint will be presented. Depending on resources and student skills the level of detail in all three categories (analytical modules, base data, and installation) may be customized. At the conclusion of the class students should understand what is needed to run UrbanFootprint, though only students with exceptional existing GIS and Linux experience are likely to be able to operate UrbanFootprint independently.
 
@@ -71,19 +71,16 @@ Day 1
 30 Minutes:
 Introduction to UrbanFootprint :ref:`Link <ufintro>` (PPT)
 
-1:30 hours:
+2:00 hours:
 Scenario Editing :ref:`Link <editing>` (PPT)
 
 1:00
-Analysis Modules :ref:`Link <analysismod>` (PPT)
+Analysis Modules :ref:`Link <analysismods>` (PPT)
 
-2:00
-Hands on experience
+3:00
+Exercise: Develop a scenario
 
-1:00
-Analysis Modules :ref:`Link <analysismod>` (PPT)
-
-1:00
+1:30
 Discussion and Additional Hands-on time.
 
 Day 2
@@ -96,10 +93,10 @@ Installation :ref:`Link <installation>`
 Data Preparation :ref:`Link <dataprep>` (PPT)
 
 1:00
-Hands on experience (Sample Data)
+Exercise: Data Creation
 
 4:00
-Scenario Creation Project
+Exercise: Create and Evaluate a Scenario
 
 1:00
 Conclusion and Discussion
@@ -119,7 +116,7 @@ Introduction to UrbanFootprint :ref:`Link <ufintro>` (PPT)
 Scenario Editing :ref:`Link <editing>` (PPT)
 
 30 Minutes
-Analysis Modules :ref:`Link <analysismod>` (PPT)
+Analysis Modules :ref:`Link <analysismods>` (PPT)
 
 1:00
 Hands on experience
