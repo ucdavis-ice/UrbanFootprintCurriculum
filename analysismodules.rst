@@ -1,3 +1,4 @@
+..  _analysismods:
 Analysis Modules
 ================
 

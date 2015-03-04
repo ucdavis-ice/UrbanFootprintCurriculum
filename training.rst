@@ -20,7 +20,7 @@ Technical Level: medium
 Introduction to UrbanFootprint :ref:`Link <ufintro>` (PPT)
 
 1:30 hours:
-Scenario Editing (Link) (PPT)
+Scenario Editing :ref:`Link <editing>` (PPT)
 
 2:00
 Hands on experience
@@ -34,7 +34,7 @@ Installing UrbanFootprint
 Technical Level: Very High
 
 1:00 (3:00+ to complete an installation)
-Installation (Link)
+Installation :ref:`Link <installation>`
 
 Base Data Creation
 ++++++++++++++++++
@@ -42,7 +42,7 @@ Base Data Creation
 Technical Level: Very High
 
 1:00
-Data Preparation (Link) (PPT)
+Data Preparation :ref:`Link <dataprep>` (PPT)
 
 1:00
 Hands on experience (Sample Data)
@@ -54,7 +54,7 @@ Analytical Modules
 Technical Level: High
 
 1:00
-Analysis Modules (Link) (PPT)
+Analysis Modules :ref:`Link <analysismod>` (PPT)
 
 2 Day Curriculum
 ________________
@@ -72,16 +72,16 @@ Day 1
 Introduction to UrbanFootprint :ref:`Link <ufintro>` (PPT)
 
 1:30 hours:
-Scenario Editing (Link) (PPT)
+Scenario Editing :ref:`Link <editing>` (PPT)
 
 1:00
-Analysis Modules (Link) (PPT)
+Analysis Modules :ref:`Link <analysismod>` (PPT)
 
 2:00
 Hands on experience
 
 1:00
-Analysis Modules (Link) (PPT)
+Analysis Modules :ref:`Link <analysismod>` (PPT)
 
 1:00
 Discussion and Additional Hands-on time.
@@ -90,10 +90,10 @@ Day 2
 +++++
 
 1:00 (3:00+ to complete an installation)
-Installation (Link)
+Installation :ref:`Link <installation>`
 
 1:00
-Data Preparation (Link) (PPT)
+Data Preparation :ref:`Link <dataprep>` (PPT)
 
 1:00
 Hands on experience (Sample Data)
@@ -116,10 +116,10 @@ Brief notes will be given on the installation of UrbanFootprint and on base data
 Introduction to UrbanFootprint :ref:`Link <ufintro>` (PPT)
 
 1:00 hours:
-Scenario Editing (Link) (PPT)
+Scenario Editing :ref:`Link <editing>` (PPT)
 
 30 Minutes
-Analysis Modules (Link) (PPT)
+Analysis Modules :ref:`Link <analysismod>` (PPT)
 
 1:00
 Hands on experience

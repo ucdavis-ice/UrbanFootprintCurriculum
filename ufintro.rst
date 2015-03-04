@@ -1,5 +1,4 @@
 ..  _ufintro:
-
 Introduction to UrbanFootprint
 ==============================
 

@@ -1,3 +1,4 @@
+..  _contributors:
 Contributors
 ============
 
