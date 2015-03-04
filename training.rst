@@ -26,7 +26,7 @@ Introduction to UrbanFootprint :ref:`Link <ufintro>` (PPT)
 1:30 hours:
 Scenario Editing :ref:`Link <editing>` (PPT)
 
-2:00
+2:00 hours:
 Hands on experience
 
 Technical Training
@@ -39,7 +39,7 @@ Installing UrbanFootprint
 
 **Subjects:**
 
-1:00 (3:00+ to complete an installation)
+1:00 hour (3:00+ to complete an installation):
 Installation :ref:`Link <installation>`
 
 Base Data Creation
@@ -49,10 +49,10 @@ Base Data Creation
 
 **Subjects:**
 
-1:00
+1:00 hour:
 Data Preparation :ref:`Link <dataprep>` (PPT)
 
-1:00
+1:00 hour:
 Hands on experience (Sample Data)
 
 
@@ -63,7 +63,7 @@ Analytical Modules
 
 **Subjects:**
 
-1:00
+1:00 hour:
 Analysis Modules :ref:`Link <analysismods>` (PPT)
 
 2 Day Curriculum
@@ -88,13 +88,13 @@ Introduction to UrbanFootprint :ref:`Link <ufintro>` (PPT)
 2:00 hours:
 Scenario Editing :ref:`Link <editing>` (PPT)
 
-1:00
+1:00 hour:
 Analysis Modules :ref:`Link <analysismods>` (PPT)
 
-3:00
+3:00 hours:
 Exercise: Develop a scenario
 
-1:30
+1:30 hours:
 Discussion and Additional Hands-on time.
 
 Day 2
@@ -102,19 +102,19 @@ Day 2
 
 **Subjects:**
 
-1:00 (3:00+ to complete an installation)
+1:00 hour (3:00+ to complete an installation):
 Installation :ref:`Link <installation>`
 
-1:00
+1:00 hour:
 Data Preparation :ref:`Link <dataprep>` (PPT)
 
-1:00
+1:00 hour:
 Exercise: Data Creation
 
-4:00
+4:00 hours:
 Exercise: Create and Evaluate a Scenario
 
-1:00
+1:00 hour:
 Conclusion and Discussion
 
 3 Hour Curriculum
@@ -132,12 +132,12 @@ Brief notes will be given on the installation of UrbanFootprint and on base data
 30 Minutes:
 Introduction to UrbanFootprint :ref:`Link <ufintro>` (PPT)
 
-1:00 hours:
+1:00 hour:
 Scenario Editing :ref:`Link <editing>` (PPT)
 
 30 Minutes: 
 Analysis Modules :ref:`Link <analysismods>` (PPT)
 
-1:00
+1:00 hour:
 Hands on experience
 
