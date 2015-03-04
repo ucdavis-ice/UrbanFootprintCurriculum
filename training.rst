@@ -69,7 +69,7 @@ Day 1
 +++++
 
 30 Minutes:
-Introduction to UrbanFootprint :ref:'ufintro' (PPT)
+Introduction to UrbanFootprint :ref:'Link <ufintro>' (PPT)
 
 1:30 hours:
 Scenario Editing (Link) (PPT)
