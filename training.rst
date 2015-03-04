@@ -14,7 +14,7 @@ Introduction to UrbanFootprint :ref:`Link <ufintro>` (PPT)
 Training for Scenario Editors
 _____________________________
 
-Technical Level: medium
+Technical Level: Medium
 
 30 Minutes:
 Introduction to UrbanFootprint :ref:`Link <ufintro>` (PPT)
@@ -60,6 +60,7 @@ Analysis Modules :ref:`Link <analysismods>` (PPT)
 ________________
 
 Intended Audience: Land use planners, transportation planners, GIS staff
+Technical Level: High - very high
 
 The two day curriculum prepares a user to understand how to use UrbanFootprint for defining, editing, and evaluating scenarios. The focus is on the scenario planing applications of UrbanFootprint and the specific tasks that need to be accomplished in order to build a scenario from base data. 
 
@@ -105,6 +106,8 @@ Conclusion and Discussion
 _________________
 
 Intended Audience: Land use planners, transportation planners, GIS staff, other interested individuals.
+
+Technical Level: Medium
 
 The three hour curriculum is intended to familiarize the students with what UrbanFootprint is, how it can be used for scenario planning, and familiarize the student with the process in a hands-on experience. 
 Brief notes will be given on the installation of UrbanFootprint and on base data creation, but these topics will not be covered in detail. 
