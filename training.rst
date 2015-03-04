@@ -1,3 +1,4 @@
+.. _training:
 Training Suggestions
 ====================
 
@@ -62,7 +63,7 @@ Intended Audience: Land use planners, transportation planners, GIS staff
 
 The two day curriculum prepares a user to understand how to use UrbanFootprint for defining, editing, and evaluating scenarios. The focus is on the scenario planing applications of UrbanFootprint and the specific tasks that need to be accomplished inorder to build a scenario from base data. 
 
-The students will gain an understanding of what scenario planning is, and why it is done. They will be trained in how to apply those lessons to the creation of a scenario in a hands0on environment. As part of this training an overview of the analytical modules, base data creation, and the installation and deployment process of UrbanFootprint will be presented. Depending on resouces and student skills the level of detail all three categories (analytical modules, base data, and installation) may be customized. At the conclusion of the class students should understand what is needed to run UrbanFootprint, though only students with significant existing GIS and Linux experience are likely to be able to operate UrbanFootprint independently.
+The students will gain an understanding of what scenario planning is, and why it is done. They will be trained in how to apply those lessons to the creation of a scenario in a hands-on environment. As part of this training an overview of the analytical modules, base data creation, and the installation and deployment process of UrbanFootprint will be presented. Depending on resouces and student skills the level of detail all three categories (analytical modules, base data, and installation) may be customized. At the conclusion of the class students should understand what is needed to run UrbanFootprint, though only students with significant existing GIS and Linux experience are likely to be able to operate UrbanFootprint independently.
 
 
 Day 1
