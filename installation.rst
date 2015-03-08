@@ -227,6 +227,11 @@ You'll be able to tell that this worked if you see your command line looking som
 ::
   calthorpe@....$
 
+Activate the Python virtual envronment that UrbanFootprint will run in.
+::
+  source /srv/calthorpe_env/bin/activate
+  
+You'll be able to tell that this worked because the command line you're working at will start with "(calthorpe_env)."
 
 To move to the folder holding the configuration settings.
 ::
@@ -282,13 +287,23 @@ This concludes the primary installation of UrbanFootprint.
 Step 8: Transfer base data to server
 ____________________________________
 
-I recommend using FileZilla (or similar SFTP capable FTP Client) to get your data onto the server.
+For simplicity let's put the data wthat we'll load into urbanfootprint in either home folders for either the "Calthorpe" user or the "Ubuntu" user. If you're already logged in as Calthorpe, I suggest option 2 as the most direct route to get the sample data onto the machine. Option 1 will put the data into the Ubuntu home folder most easily.
+
+**Option 1:**
+
+Use FileZilla (or similar SFTP capable FTP Client) to get your data onto the server.
 
 Establish a connection profile, and specify the use of the username (ubuntu for an EC2 instance) and make sure that your pageant install is loading the correct ssh key. 
 
 Transfer the <filename>.dump file to the server
 
-An alternative is:
+**Option 2**
+
+Switch to the calthorpe home folder:
+::
+  cd ~
+
+Then use the "curl" tool to download the database dump file.
 ::
   curl -O http://downloads.ice.ucdavis.edu/~neroth/uf/yolo_stage_db.dump
 
@@ -337,14 +352,14 @@ Then import the database dump to the staging database.
 ::
   pg_restore -d stage_db /home/calthorpe/yolo_stage_db.dump
 
-This is assuming the data you're loading is in a file called UF_yolo_data.dump and that it is in the home directory of the calthorpe user. Adjust the path to the dump file as needed.
+This is assuming the data you're loading is in a file called "yolo_stage_db.dump" and that it is in the home directory of the calthorpe user. Adjust the path to the dump file as needed.
 
 Step 10. Prepare for data import 
 ________________________________
 
 First, a work around that is needed on Amazon instances to work within the security system.
 
-Note: If you're doing a non-amazon installation then you'llw ant to substitute "local_prod" in place of "amazon_local" and can skip past the next few lines to "configuring the connection to the staging database".
+Note: If you're doing a non-amazon installation then you'll want to substitute "local_prod" in place of "amazon_local" and can skip past the next few lines to "configuring the connection to the staging database".
 
 Copy the PEM file that you're using to connect to the server to the /home/calthorpe/.ssh
 
@@ -405,8 +420,42 @@ And then commit our changes to git.
 ::
   git commit -a -m "adjusted staging database settings"
 
+Step 11. Final Settings and System Checks
+_________________________________________
 
-Step 11. Build UrbanFootprint
+Check that the Postgresql setup is configured to respond to requests from Tilestache
+::
+  sudo nano /etc/postgresql/9.3/main/pg_hba.conf
+
+Scroll down to the bottom, and look to see if the line
+::
+  local   all             tilestache                              trust
+  
+Is above or below:
+:: 
+  local   all             all                                     peer
+
+If the tilestache line is not above the other (or if it is not present), edit the file so that it looks like:
+::
+  # TYPE  DATABASE        USER            ADDRESS                 METHOD
+  # "local" is for Unix domain socket connections only
+  local   all             tilestache                              trust
+  local   all             all                                     peer
+  # IPv4 local connections:
+  host    all             all             127.0.0.1/32            md5
+  # IPv6 local connections:
+  host    all             all             ::1/128                 md5
+  # Allow replication connections from localhost, by a user with the
+  # replication privilege.  
+  #local   replication     postgres                                peer
+  #host    replication     postgres        127.0.0.1/32            md5
+  #host    replication     postgres        ::1/128                 md5
+
+Then save the file and exit. Restart postgresql
+::
+  sudo service postgresql restart
+
+Step 12. Build UrbanFootprint
 _____________________________
 
 Some of these steps may take a long time to complete
@@ -427,6 +476,8 @@ Import the staging database settings (takes about 2min.)
 *Note: Tilestache will show an error message if the spatial data has not been loaded previouisly.*
 
 Do a code update. This is an abbreviated version of the installation that we did earlier. (takes about 2 min.)
+
+This is also how you would update the code you're using to a newer version, so be cautious. If you're not looking to fix a problem you're having, or in need of a new feature, you probably don't wan to run this.
 ::
   fab amazon_local deploy
 
@@ -435,41 +486,8 @@ Do the data import and system setup. (takes 30min+)
   fab amazon_local recreate_dev
 
 You will be asked twice if you want to continue because if you have an existing UrbanFootprint database of the same name it will be completely overwritten by this step. 
+**Approving this process will detroy all existing base data and scenarios for this geographic area on this virtual machine.** 
 
-Step 12. Final Settings and System Checks
-_________________________________________
-
-Check that the Postgresql setup is configured to respond to requests from Tilestache
-::
-  sudo nano /etc/postgresql/9.3/main/pg_hba.conf
-
-Scroll down to the bottom, and look to see if the line
-::
-  local   all             tilestache                              trust
-  
-Is above or below:
-:: 
-  local   all             all                                     peer
-
-If the tilestache line is not above the other, edit the file so that it looks like:
-::
-  # TYPE  DATABASE        USER            ADDRESS                 METHOD
-  # "local" is for Unix domain socket connections only
-  local   all             tilestache                              trust
-  local   all             all                                     peer
-  # IPv4 local connections:
-  host    all             all             127.0.0.1/32            md5
-  # IPv6 local connections:
-  host    all             all             ::1/128                 md5
-  # Allow replication connections from localhost, by a user with the
-  # replication privilege.  
-  #local   replication     postgres                                peer
-  #host    replication     postgres        127.0.0.1/32            md5
-  #host    replication     postgres        ::1/128                 md5
-
-Then save the file and exit. Restart postgresql
-::
-  sudo service postgresql restart
 
 Step 13. Log In
 _______________
