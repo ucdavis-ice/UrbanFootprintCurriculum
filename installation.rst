@@ -423,6 +423,10 @@ And then commit our changes to git.
 Step 11. Final Settings and System Checks
 _________________________________________
 
+Set up the tilestache service with access to the database
+::
+  fab amazon_local setup_tilestache_user
+
 Check that the Postgresql setup is configured to respond to requests from Tilestache
 ::
   sudo nano /etc/postgresql/9.3/main/pg_hba.conf
