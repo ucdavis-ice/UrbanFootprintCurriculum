@@ -279,11 +279,6 @@ Tilestache will be unable to run until we give it some mapping data to work with
 
 This concludes the primary installation of UrbanFootprint.
 
-If you would like, you can now remove the urbanfootprint directory in /home/ubuntu by:
-::
-  rm -rf urbanfootprint
-
-
 Step 8: Transfer base data to server
 ____________________________________
 
