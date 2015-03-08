@@ -26,7 +26,7 @@ ___________
 
 IDLE is an Integrated Development Environment (IDE) for Python. It is installed automatically as part of the Python installation that is part of every recent ArcGIS desktop installation. 
 
-IDLE is not a particularly fully featured IDE, nor is it my favorite: Alternate IDEs that you might consider using for your own work  include: Eclipse (with the PyDev extension), Spyder, PyCharm, WingIDE. However since those are likely to require installation with adminiatrative access, this exercise will be designed around the use of IDLE. 
+IDLE is not a particularly fully featured IDE, nor is it my favorite. Alternate IDEs that you might consider using for your own work  include: Eclipse (with the PyDev extension), Spyder, PyCharm, WingIDE. However since those are likely to require installation with adminiatrative access, this exercise will be designed around the use of IDLE. 
 
 Open IDLE 
 Windows 7: Using the start menu,  All Programs-->ArcGIS-->Python2.7-->IDLE(Python GUI)
