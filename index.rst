@@ -25,6 +25,7 @@ Contents:
    datapreparation
    analysismodules
    training
+   exercises
    contributors
 
 
