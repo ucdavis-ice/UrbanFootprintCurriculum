@@ -58,6 +58,7 @@ Starting Data:
 ______________
 
 The file geodatabase contains the following tables and feature classes (a table that contains spatial information).
+
 * lu_freq: a table that will let us translate from the "local land use code" into the name of the UrbanFootprint placetypes or building types that will be used to display it.
 * pt_ratios: a table that contains a large number of fields that will allow us to disaggregate the starting data into subcategories. This process is the bulk of the work. The table contains one row for each place type or building type listed in lu_freq.
 * yolo_start_step1: This feature class is the starting point for all of the spatial data and contains the acreages and square footages of each parcel, as well as the local land use code, and an estimate of the population, dwelling unit, and employment counts for that parcel. 
