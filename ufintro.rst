@@ -386,7 +386,7 @@ _____________________
 
 .. image:: graphics/PublicHealth.png
 
-Demonstration graphic.
+*Note: the Public Health model is being redeveloped at the moment. These are results from an old iteration of the model.*
 
 Discussion
 ++++++++++
