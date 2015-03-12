@@ -71,7 +71,7 @@ Examples:
 * Single Family Dwelling
 * Big Box Store
 
-.. image:: graphics/BuildingTypess.png
+.. image:: graphics/BuildingTypes.png
 
 Discussion
 ++++++++++
@@ -103,7 +103,7 @@ Discussion
 Agricultural Types
 __________________
 
-.. image:: graphics/CropTypes.png)
+.. image:: graphics/CropType.png)
 
 * A parallel structure has been developed to handle the Rural Urban Connections Strategy (RUCS) types developed by SACOG
 * Crop, Crop Type, and Landscape Type
