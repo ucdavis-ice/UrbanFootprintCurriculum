@@ -512,7 +512,7 @@ To dump a database:
 
 example:
 ::
-  pg_dump - Fc stage_db > yolo_stage.dump  
+  pg_dump -Fc stage_db > yolo_stage.dump  
 
 
 Checking Service Status
