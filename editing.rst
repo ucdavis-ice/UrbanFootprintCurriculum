@@ -103,7 +103,7 @@ Discussion
 Agricultural Types
 __________________
 
-.. image:: graphics/CropType.png)
+.. image:: graphics/CropType.png
 
 * A parallel structure has been developed to handle the Rural Urban Connections Strategy (RUCS) types developed by SACOG
 * Crop, Crop Type, and Landscape Type
