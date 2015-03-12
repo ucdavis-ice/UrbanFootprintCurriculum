@@ -48,7 +48,7 @@ We know specific details about the buildings
 
 In many cases we can point to a “real” building.
 
-Image here (building editor)
+.. image:: graphics/Buildings.png
 
 Discussion
 ++++++++++
@@ -71,7 +71,7 @@ Examples:
 * Single Family Dwelling
 * Big Box Store
 
-Image here (building type editor)
+.. image:: graphics/BuildingTypess.png
 
 Discussion
 ++++++++++
@@ -91,7 +91,7 @@ Each building type is assigned a percentage that represents it’s proportion of
 
 Through assembling Place Types in this fashion we can aggregate all of the information about the buildings up to the Place Type
 
-Image here (building type editor)
+.. image:: graphics/PlaceTypes.png
 
 Discussion
 ++++++++++
@@ -100,19 +100,19 @@ Discussion
 #. Each building type has a percentage that it represents of the Place Type.
 #. Having built a place type, we know information about all of the buildings in it based on the relationship from place type to building type to buildings.
 
-RUCS Types
-__________
+Agricultural Types
+__________________
 
-Image here (RUCS type editor)
+.. image:: graphics/CropTypes.png)
 
-* A parallel structure has been developed to handle the Rural Urban Connections Strategy types
+* A parallel structure has been developed to handle the Rural Urban Connections Strategy (RUCS) types developed by SACOG
 * Crop, Crop Type, and Landscape Type
 * These are used for Agricultural analysis
 
 Discussion
 ++++++++++
 
-The RUCS types of Crop, Crop Type, and Landscape type are a parallel structure to the building, building type, and place type structure. It’s just intended to represent the agricultural, and in the future other openspace values for analytical purposes.
+The RUCS types of Crop, Crop Type, and Landscape type are a parallel structure to the building, building type, and place type structure. It’s just intended to represent the agricultural, and in the future other open space values for analytical purposes.
 
 Recommended Practices
 _____________________
@@ -162,7 +162,7 @@ Discussion
 Translating the Goals into Targets
 __________________________________
 
-Translating the Goals into Targets:
+Translating the Goals into quantitative Targets:
 
 * Population
 * Jobs/Housing
@@ -243,7 +243,7 @@ Image here (log on screen)
 3. Enter user name and password (for demo sites)
 
  * Username: test 
- * Password: test
+ * Password: test@uf
 
 Tour of UrbanFootprint
 ----------------------
@@ -332,7 +332,7 @@ Analysis Modules
 .. image:: graphics/ButtonLocation_Analysis.svg
 
 
-Scenario Mangement
+Scenario Management
 ------------------
 
 * Selecting a Geographic Area
@@ -362,8 +362,6 @@ Scenario Mangement
 
  * Double click and edit text
  * Click Save
-
-
 
 
 Charts
@@ -563,6 +561,7 @@ When querying strings, the following can be used for querying: (must be capitali
  + ENDS_WITH : String ends with a certain letter or group of letters
  + CONTAINS: String contains a certain letter or group of letters
 
+For example:
 ::
   land_use BEGINS_WITH 'Blank'
 
@@ -704,11 +703,11 @@ Work Flow:
 Developable Space
 _________________
 
-Image here
+ .. image:: graphics/Developable2.png
 
 * How much space in each parcel is actually developable?
 * Based on existing construction and environmental constraints.
-* Displayed as quantiles. Green will acept the most development, red the least
+* Displayed as quantiles. Green will accept the most development, red the least
 
 
 Scenario Builder
