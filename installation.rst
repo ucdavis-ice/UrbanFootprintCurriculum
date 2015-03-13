@@ -205,6 +205,12 @@ You will then be asked to create a name for your server. Enter a logical name fo
 
 You will need to then enter your bitbucket account name and password. What happens here is that your server is registering itself with the bitbucket account using a SSH key. This will enable it to complete the rest of the software installation without needing further use of the user name and password.
 
+If the installation pauses on:
+:: 
+  git log -n 1 --color=never --pretty=oneline
+  
+Press "q" to continue.
+
 You will know it's done when the text stops scrolling by and you see something that looks like:
 ::
   ubuntu@ip-172-31-36-172:~/urbanfootprint$
