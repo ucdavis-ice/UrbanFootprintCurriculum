@@ -1,6 +1,6 @@
 .. _resources:
-UrbanFootprint Resources
-========================
+Resources
+=========
 
 Organizations
 -------------

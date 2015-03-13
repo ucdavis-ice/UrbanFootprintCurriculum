@@ -1,6 +1,6 @@
 .. _exercises:
-UrbanFootprint Exercises
-========================
+Exercises
+=========
 
 .. _exercises_datacreation:
 Data Creation
