@@ -1,4 +1,6 @@
-﻿CREATE TABLE yolo_county_base_feature AS
+﻿--DROP TABLE IF EXISTS yolo_county_base_feature;
+
+CREATE TABLE yolo_county_base_feature AS
 SELECT  
 a.geography_id, 
 a.source_id, 
@@ -82,7 +84,7 @@ a.updated,
 a.dev_pct,
 a.density_pct,
 a.gross_net_pct,
-a.dirty_flag 
+b.dirty_flag 
 FROM 
 yolo_county_base_feature_old b
 LEFT JOIN yolo_county_base_features2 a ON b.geography_id = a.geography_id
