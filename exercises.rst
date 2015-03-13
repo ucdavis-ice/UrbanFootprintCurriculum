@@ -17,7 +17,7 @@ Downloads:
 
 Download the zipped FileGeodatabase and BuiltTable.py to a folder on your computer, and extract the file geodatabase so that you have both the file geodatabase and the python file in the same folder. The file geodatabase will look like a folder with a .dgb extension.
 
-FileGeodatabase (Download)
+FileGeodatabase http://downloads.ice.ucdavis.edu/~neroth/uf/DataCreation.zip
 BuiltTable.py (Download)
 OptionalMaterials (Download)
 
