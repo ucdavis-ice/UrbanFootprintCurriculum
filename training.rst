@@ -10,7 +10,7 @@ ______________________
 **Subjects:**
 
 30 Minutes:
-Introduction to UrbanFootprint :ref:`Link <ufintro>` (PPT)
+Introduction to UrbanFootprint :ref:`Link <ufintro>` :download:`PPT <OtherDocs/UF_Intro.pptx>`
 
 
 Training for Scenario Editors
@@ -21,10 +21,10 @@ _____________________________
 **Subjects:**
 
 30 Minutes:
-Introduction to UrbanFootprint :ref:`Link <ufintro>` (PPT)
+Introduction to UrbanFootprint :ref:`Link <ufintro>` :download:`PPT <OtherDocs/UF_Intro.pptx>`
 
 1:30 hours:
-Scenario Editing :ref:`Link <editing>` (PPT)
+Scenario Editing :ref:`Link <editing>` :download:`PPT <OtherDocs/UF_ScenarioEditing.pptx>`
 
 2:00 hours:
 Hands on experience
@@ -50,10 +50,10 @@ Base Data Creation
 **Subjects:**
 
 1:00 hour:
-Data Preparation :ref:`Link <dataprep>` (PPT)
+Data Preparation :ref:`Link <dataprep>` :download:`PPT <OtherDocs/UF_BaseData.pptx>`
 
 1:00 hour:
-Hands on experience (Sample Data)
+Hands on experience :ref:`Link <exercises_datacreation>`
 
 
 Analytical Modules
@@ -64,7 +64,7 @@ Analytical Modules
 **Subjects:**
 
 1:00 hour:
-Analysis Modules :ref:`Link <analysismods>` (PPT)
+Analysis Modules :ref:`Link <analysismods>` :download:`PPT <OtherDocs/UF_AnalysisModules.pptx>`
 
 2 Day Curriculum
 ________________
@@ -83,13 +83,13 @@ Day 1
 **Subjects:**
 
 30 Minutes:
-Introduction to UrbanFootprint :ref:`Link <ufintro>` (PPT)
+Introduction to UrbanFootprint :ref:`Link <ufintro>` :download:`PPT <OtherDocs/UF_Intro.pptx>`
 
 2:00 hours:
-Scenario Editing :ref:`Link <editing>` (PPT)
+Scenario Editing :ref:`Link <editing>` :download:`PPT <OtherDocs/UF_ScenarioEditing.pptx>`
 
 1:00 hour:
-Analysis Modules :ref:`Link <analysismods>` (PPT)
+Analysis Modules :ref:`Link <analysismods>` :download:`PPT <OtherDocs/UF_AnalysisModules.pptx>`
 
 3:00 hours:
 Exercise: Develop a scenario
@@ -106,10 +106,10 @@ Day 2
 Installation :ref:`Link <installation>`
 
 1:00 hour:
-Data Preparation :ref:`Link <dataprep>` (PPT)
+Data Preparation :ref:`Link <dataprep>` :download:`PPT <OtherDocs/UF_BaseData.pptx>`
 
 1:00 hour:
-Exercise: Data Creation
+Exercise: Data Creation :ref:`Link <exercises_datacreation>`
 
 4:00 hours:
 Exercise: Create and Evaluate a Scenario
@@ -130,13 +130,13 @@ Brief notes will be given on the installation of UrbanFootprint and on base data
 **Subjects:**
 
 30 Minutes:
-Introduction to UrbanFootprint :ref:`Link <ufintro>` (PPT)
+Introduction to UrbanFootprint :ref:`Link <ufintro>` :download:`PPT <OtherDocs/UF_Intro.pptx>`
 
 1:00 hour:
-Scenario Editing :ref:`Link <editing>` (PPT)
+Scenario Editing :ref:`Link <editing>` :download:`PPT <OtherDocs/UF_ScenarioEditing.pptx>`
 
 30 Minutes: 
-Analysis Modules :ref:`Link <analysismods>` (PPT)
+Analysis Modules :ref:`Link <analysismods>` :download:`PPT <OtherDocs/UF_AnalysisModules.pptx>`
 
 1:00 hour:
 Hands on experience
