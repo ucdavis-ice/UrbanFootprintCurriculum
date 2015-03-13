@@ -26,6 +26,7 @@ Contents:
    analysismodules
    training
    exercises
+   resources
    contributors
 
 
