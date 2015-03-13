@@ -84,7 +84,7 @@ _________________
 This is a very simplistic approach to building a base data set. We will use assumed average values for each placetype to split a parcel data set with a "local" land use code by crosswalking the local land use code to place type, and then using estimates for each parcel of the number of dwelling units, employees, and parcel acres/square feet to prepare the input data. 
 
 
-Set break points on lines 32, 38, 45, 57, 143, 149, 153, 160, 167, 176, 190, 197, 216, 245, 256, 274, 292, 311, 362, 382, 391
+Set break points on lines: 32, 38, 45, 57, 143, 149, 153, 160, 167, 176, 190, 197, 216, 245, 256, 274, 292, 311, 362, 382, and 391
 
 We'll step through the code, explaining what is going on as we go to try to develop a better idea of what data is needed for the base conditions of UrbanFootprint
 
@@ -187,9 +187,11 @@ _________________
 
 This next step of loading this data can be technically challenging, and is going to depend on your system, so it'll only be described here, not actually completed.
 
-First, the dataset that you've created needs to be converted into PostGIS, the easiest is to use Esri's Data Interoperability Extension to export the data into postgis. With new versions of QGIS, it is possible to read file geodatabases and export to PostGIS. Unfortunately, we have to be careful to not truncate the field names we've just been calculating.
+First, the dataset that you've created needs to be converted into PostGIS, the easiest is to use Esri's Data Interoperability Extension to export the data into postgis, probably the staging database. With new versions of QGIS, it is possible to read file geodatabases and export to PostGIS. Unfortunately, we have to be careful to not truncate the field names we've just been calculating.
 
 Once the data is in PostGIS, there will be some data clean up because the translation between Esri's data types and PostGIS's is not perfect. This will include the creation of the wkb_geometry (well known binary geometry) field and making sure that none of your fields have too many decimal places for the fields they're moving into. We tried to handle that above by using the rounding functions. In general it is probably worth taking a templating approach where you use an existing dataset as a model for the new one and substitute in new data as needed.
+
+After all of the needed cleanup has been completed, *fab <host> recreate_dev* can be run to repopulate the UrbanFootprint database with the new data.
 
 
 
