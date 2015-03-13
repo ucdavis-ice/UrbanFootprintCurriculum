@@ -199,6 +199,8 @@ This will start the script.
 
 The script first runs an update on the system's software and will ask you to approve several installations and modifications. For each of these type Y+return.
 
+If you are asked about a GRUB update, choose the default option to keep the existing configuration by just pressing Enter.
+
 You will then be asked to create a name for your server. Enter a logical name for it. For example: uf_ice
 
 You will need to then enter your bitbucket account name and password. What happens here is that your server is registering itself with the bitbucket account using a SSH key. This will enable it to complete the rest of the software installation without needing further use of the user name and password.
