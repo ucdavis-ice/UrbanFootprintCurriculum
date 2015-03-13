@@ -330,7 +330,7 @@ Public Health
 
 .. image:: graphics/AM_PublicHealth.png
 
-The public health module is undering a major redesign at the moment. 
+The public health module is undergoing a major redesign at the moment. 
 
 The public health module builds on the transportation model as well as the baseline scenario.  Demographic assumptions combined with the local environment are used to forecast the amount of time spent in moderate and vigorous activity, proportion of the population that is overweight, and time spent in cars. These are then used to identify the incidence of weight and activity related diseases and resulting costs.
 
