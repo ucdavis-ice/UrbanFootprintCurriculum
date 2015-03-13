@@ -152,7 +152,6 @@ arcpy.Copy_management(os.path.join(fgdbpath,step1), os.path.join(fgdbpath,step2)
 
 Message("Step {step}: Joining Table".format(step=step))
 step +=1
-
 fld =  [u'built_form_key', u'String', 80, 0, 0]
 arcpy.AddField_management(os.path.join(fgdbpath,step2), fld[0],fld[1],"","",fld[2])
 arcpy.MakeFeatureLayer_management(os.path.join(fgdbpath,step2),'jnlayer' )
@@ -173,10 +172,9 @@ arcpy.RemoveJoin_management('jnlayer',srctable)
 arcpy.RemoveJoin_management('jnlayer',bltform)
 arcpy.Delete_management('jnlayer')
 
-#Message("Step {step}: Make a Copy and Cleanup".format(step=step))
-#step +=1
-#arcpy.Copy_management(os.path.join(fgdbpath,step3), os.path.join(fgdbpath,step4))
 
+Message("Step {step}: Removing Unneded Fields".format(step=step))
+step +=1
 # Delete many fields that aren't needed to save space and time on copies
 # We don't any of the fields that start with 'pt_ratios_SUM'
 delfields1 = arcpy.ListFields( os.path.join(fgdbpath,step3))
