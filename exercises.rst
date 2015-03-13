@@ -18,12 +18,13 @@ Downloads:
 Download the zipped FileGeodatabase and UF_PrepData.py to a folder on your computer, and extract the file geodatabase so that you have both the file geodatabase and the python file in the same folder. The file geodatabase will look like a folder with a .dgb extension.
 
 * FileGeodatabase http://downloads.ice.ucdavis.edu/~neroth/uf/DataCreation.zip
-* Script: :download: `UF_PrepData.py <Scripts/UF_PrepData.py>`
+* Script: :download:`UF_PrepData.py <Scripts/UF_PrepData.py>`
 
 Optional Materials:
+
 * http://downloads.ice.ucdavis.edu/~neroth/uf/DataCreationOptional.zip
-* Optional Script: :download: `UF_PrePrepdata.py <Scripts/UF_PrePrepdata.py>`
-* Optional sql: :download: `UF_DataPrepReassembly.sql <Scripts/UF_DataPrepReassembly.sql>`
+* Optional Script: :download:`UF_PrePrepdata.py <Scripts/UF_PrePrepdata.py>`
+* Optional sql: :download:`UF_DataPrepReassembly.sql <Scripts/UF_DataPrepReassembly.sql>`
 
 Using IDLE:
 ___________
