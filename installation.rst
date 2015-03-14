@@ -471,6 +471,15 @@ Then save the file and exit. Restart postgresql
 ::
   sudo service postgresql restart
 
+  
+Fix tilestache permissions on tables:
+:: 
+  createdb tilestache
+  psql -U tilestache -d urbanfootprint -c "ALTER TABLE public.tilestache_config OWNER TO tilestache;"
+  psql -U tilestache -d urbanfootprint -c "ALTER TABLE public.tilestache_layer OWNER TO tilestache;"
+  
+  
+  
 Step 12. Build UrbanFootprint
 _____________________________
 
