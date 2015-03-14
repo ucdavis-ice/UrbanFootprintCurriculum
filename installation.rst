@@ -227,7 +227,7 @@ Set the user and virtual environment
 ++++++++++++++++++++++++++++++++++++
 
 Do the following steps:
-To log in as the "calthorpe" user under which most of the server is setup.
+To log in as the "calthorpe" user under which most of the server is setup. You'll need to enter the calthorpe password.
 ::
   su calthorpe
 
@@ -431,6 +431,10 @@ And then commit our changes to git.
 Step 11. Final Settings and System Checks
 _________________________________________
 
+Switch to the following path:
+:: 
+  cd /srv/calthorpe/urbanfootprint
+
 Set up the tilestache service with access to the database
 ::
   fab amazon_local setup_tilestache_user
@@ -492,13 +496,27 @@ Do a code update. This is an abbreviated version of the installation that we did
 This is also how you would update the code you're using to a newer version, so be cautious. If you're not looking to fix a problem you're having, or in need of a new feature, you probably don't wan to run this.
 ::
   fab amazon_local deploy
+  
+If an error is generated that looks like:
+:: 
+  HTTPError: HTTP Error 404: Not Found
+  ERROR:boto:Unable to read instance data, giving up
+  No handler was ready to authenticate. 1 hand
 
+It is safe to ignore.
+  
 Do the data import and system setup. (takes 30min+)
 ::
-  fab amazon_local recreate_dev
+  fab amazon_local build:prod
 
 You will be asked twice if you want to continue because if you have an existing UrbanFootprint database of the same name it will be completely overwritten by this step. 
-**Approving this process will detroy all existing base data and scenarios for this geographic area on this virtual machine.** 
+**Approving this process will destroy all existing base data and scenarios for this geographic area on this virtual machine.** 
+
+if when running the build process you get an error about being unable to delete/drop the urbanfootprint database, run:
+::
+  dropdb urbanfootprint
+  
+And then rerun the build command.
 
 
 Step 13. Log In
