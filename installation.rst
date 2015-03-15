@@ -205,6 +205,8 @@ You will then be asked to create a name for your server. Enter a logical name fo
 
 You will need to then enter your bitbucket account name and password. What happens here is that your server is registering itself with the bitbucket account using a SSH key. This will enable it to complete the rest of the software installation without needing further use of the user name and password.
 
+When prompted for a client, enter "sacog" to set up to use the demonstration data prepared for this set of instructions.
+
 If the installation pauses on:
 :: 
   git log -n 1 --color=never --pretty=oneline
@@ -313,8 +315,7 @@ Switch to the calthorpe home folder:
 
 Then use the "curl" tool to download the database dump file.
 ::
-  curl -O http://downloads.ice.ucdavis.edu/~neroth/uf/yolo_stage_db.dump
-  curl -O http://downloads.ice.ucdavis.edu/~neroth/uf/yolo_source_data.dmp
+  curl -O http://downloads.ice.ucdavis.edu/~neroth/uf/yolo_stage_20150315.dump
 
 Step 9: Create a staging database
 _________________________________
@@ -429,16 +430,56 @@ And then commit our changes to git.
 ::
   git commit -a -m "adjusted staging database settings"
 
-Step 11. Final Settings and System Checks
-_________________________________________
+Step 11. Build UrbanFootprint
+_____________________________
 
-Switch to the following path:
-:: 
+Some of these steps may take a long time to complete
+
+Switch back to the main urbanfootprint folder.
+::
   cd /srv/calthorpe/urbanfootprint
 
-Set up the tilestache service with access to the database
+Specify the client name and settings (takes about 2min.)
 ::
-  fab amazon_local setup_tilestache_user
+  fab amazon_local client:sacog
+
+*Note: Tilestache will show an error message if the spatial data has not been loaded previouisly.*
+
+Import the staging database settings (takes about 2min.)
+::
+  fab amazon_local local_settings:stage
+*Note: Tilestache will show an error message if the spatial data has not been loaded previouisly.*
+
+Do a code update. This is an abbreviated version of the installation that we did earlier. (takes about 2 min.)
+
+This is also how you would update the code you're using to a newer version, so be cautious. If you're not looking to fix a problem you're having, or in need of a new feature, you probably don't wan to run this.
+::
+  fab amazon_local deploy
+  
+If an error is generated that looks like:
+:: 
+  HTTPError: HTTP Error 404: Not Found
+  ERROR:boto:Unable to read instance data, giving up
+  No handler was ready to authenticate. 1 hand
+
+It is safe to ignore.
+
+Run this to clear the database for use:
+::
+  dropdb urbanfootprint
+  
+Do the data import and system setup. (takes 30min+)
+::
+  fab amazon_local build:prod
+
+You will be asked twice if you want to continue because if you have an existing UrbanFootprint database of the same name it will be completely overwritten by this step. 
+**Approving this process will destroy all existing base data and scenarios for this geographic area on this virtual machine.** 
+
+if when running the build process you get an error about being unable to delete/drop the urbanfootprint database, run:
+::
+  dropdb urbanfootprint
+  
+And then rerun the build command.
 
 Check that the Postgresql setup is configured to respond to requests from Tilestache
 ::
@@ -472,64 +513,9 @@ Then save the file and exit. Restart postgresql
 ::
   sudo service postgresql restart
 
-  
-Fix tilestache permissions on tables:
-:: 
-  createdb tilestache
-  psql -U tilestache -d urbanfootprint -c "ALTER TABLE public.tilestache_config OWNER TO tilestache;"
-  psql -U tilestache -d urbanfootprint -c "ALTER TABLE public.tilestache_layer OWNER TO tilestache;"
-  
-  
-  
-Step 12. Build UrbanFootprint
-_____________________________
-
-Some of these steps may take a long time to complete
-
-Switch back to the main urbanfootprint folder.
-::
-  cd /srv/calthorpe/urbanfootprint
-
-Specify the client name and settings (takes about 2min.)
-::
-  fab amazon_local client:sacog
-
-*Note: Tilestache will show an error message if the spatial data has not been loaded previouisly.*
-
-Import the staging database settings (takes about 2min.)
-::
-  fab amazon_local local_settings:stage
-*Note: Tilestache will show an error message if the spatial data has not been loaded previouisly.*
-
-Do a code update. This is an abbreviated version of the installation that we did earlier. (takes about 2 min.)
-
-This is also how you would update the code you're using to a newer version, so be cautious. If you're not looking to fix a problem you're having, or in need of a new feature, you probably don't wan to run this.
-::
-  fab amazon_local deploy
-  
-If an error is generated that looks like:
-:: 
-  HTTPError: HTTP Error 404: Not Found
-  ERROR:boto:Unable to read instance data, giving up
-  No handler was ready to authenticate. 1 hand
-
-It is safe to ignore.
-  
-Do the data import and system setup. (takes 30min+)
-::
-  fab amazon_local build:prod
-
-You will be asked twice if you want to continue because if you have an existing UrbanFootprint database of the same name it will be completely overwritten by this step. 
-**Approving this process will destroy all existing base data and scenarios for this geographic area on this virtual machine.** 
-
-if when running the build process you get an error about being unable to delete/drop the urbanfootprint database, run:
-::
-  dropdb urbanfootprint
-  
-And then rerun the build command.
 
 
-Step 13. Log In
+Step 12. Log In
 _______________
 
 Copy the IP address from your Amazon EC2 control console and paste it into the address window of a web browser (Chrome seems to be the preferred one). 
