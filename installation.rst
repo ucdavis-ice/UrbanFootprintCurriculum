@@ -314,6 +314,7 @@ Switch to the calthorpe home folder:
 Then use the "curl" tool to download the database dump file.
 ::
   curl -O http://downloads.ice.ucdavis.edu/~neroth/uf/yolo_stage_db.dump
+  curl -O http://downloads.ice.ucdavis.edu/~neroth/uf/yolo_source_data.dmp
 
 Step 9: Create a staging database
 _________________________________
