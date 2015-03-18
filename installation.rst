@@ -315,7 +315,7 @@ Switch to the calthorpe home folder:
 
 Then use the "curl" tool to download the database dump file.
 ::
-  curl -O http://downloads.ice.ucdavis.edu/~neroth/uf/yolo_stage_20150315.dump
+  curl -O http://downloads.ice.ucdavis.edu/~neroth/uf/yolo_stage.dump
 
 Step 9: Create a staging database
 _________________________________
@@ -360,7 +360,7 @@ Add the postgis extension to stage_db
 
 Then import the database dump to the staging database.
 ::
-  pg_restore -d stage_db /home/calthorpe/yolo_stage_db.dump
+  pg_restore -d stage_db /home/calthorpe/yolo_stage.dump
 
 This is assuming the data you're loading is in a file called "yolo_stage_db.dump" and that it is in the home directory of the calthorpe user. Adjust the path to the dump file as needed.
 
@@ -424,7 +424,7 @@ Look for a section that like: (approximatley line 45, use Ctrl+C to show the lin
         password = '<Password>'
       )
 
-Edit the host = and database = to point to 'localhost', and the name of your staging database resepectively (so they may look like the example above)
+Edit the host = and database = to point to 'localhost', and the name of your staging database respectively (so they may look like the example above)
 
 And then commit our changes to git.
 ::
