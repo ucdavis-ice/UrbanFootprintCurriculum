@@ -337,4 +337,20 @@ The public health module builds on the transportation model as well as the basel
 The transportation engine provides estimates of VMT and pollutants which are used to estimate pedestrian-auto collisions and respiratory illnesses, and the related costs from each.
 
 
+Commandline Analysis
+--------------------
+
+The following is a new feature, and is likely to change over time.
+
+To run VMT on all scenarios
+::
+  ./manage.py run_analysis --vmt
+  
+Or on a single scenario
+::
+  ./manage.py run_analysis --vmt --base
+
+For help:
+::
+  ./manage.py run_analysis --help  
 
