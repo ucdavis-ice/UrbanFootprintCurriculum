@@ -513,7 +513,10 @@ Then save the file and exit. Restart postgresql
 ::
   sudo service postgresql restart
 
-
+And restart all of the UrbanFootprint services.
+::
+  sudo supervisorctl restart all
+ 
 
 Step 12. Log In
 _______________
