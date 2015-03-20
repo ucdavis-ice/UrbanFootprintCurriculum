@@ -167,9 +167,9 @@ You will be asked to approve the installation. Enter Y+return to do so.
 Step 3: Clone the repository
 ____________________________
 
-This will create a local copy of the source code (aka, cloning the repository) and instructions used by the computer to install it on your local computer.
+This will create a local copy of the source code (aka, cloning the repository) and instructions used by the computer to install it on your local computer. The branch Release-1.3 is a stable version that will remain static with the exception of bugfixes.
 ::
-  git clone https://bitbucket.org/calthorpe/urbanfootprint.git 
+  git clone -b Release-1.3 https://bitbucket.org/calthorpe/urbanfootprint.git 
 
 You will be asked for your bitbucket account name and password
 
