@@ -583,3 +583,10 @@ Create a new server connection.
 * Port: the source port that you entered above
 * Username: calthorpe
 * Password: <Password> 
+
+Remove All Scenarios
+____________________
+
+With the calthorpe_env active and when logged in as the calthorpe user:
+::
+  manage.py footprint_init --skip --delete_clones
