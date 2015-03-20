@@ -589,4 +589,11 @@ ____________________
 
 With the calthorpe_env active and when logged in as the calthorpe user:
 ::
-  manage.py footprint_init --skip --delete_clones
+  ./manage.py footprint_init --skip --delete_clones
+  
+Create an Alias for UF
+______________________
+
+Add the following as the last line of /home/calthorpe/.bashrc using nano
+::
+  alias uf="cd /srv/calthorpe/urbanfootprint && source /srv/calthorpe_env/bin/activate"
