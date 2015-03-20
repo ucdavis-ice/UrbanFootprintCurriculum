@@ -597,3 +597,22 @@ ______________________
 Add the following as the last line of /home/calthorpe/.bashrc using nano
 ::
   alias uf="cd /srv/calthorpe/urbanfootprint && source /srv/calthorpe_env/bin/activate"
+
+Then you'll either need to log out and log back in, or run:
+::
+  . .bashrc
+  
+Layer Config
+____________
+
+To modify default layer settings
+::
+  ./manage.py shell
+  from footprint.main.models import Layer
+  layers = Layer.objects.filter(db_entity_key__icontains="existing_land")
+  for layer in layers:
+  layer.visible = True
+  layer.save()
+  [press enter to end the for loop]
+
+
