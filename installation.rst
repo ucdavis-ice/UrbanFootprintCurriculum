@@ -34,7 +34,7 @@ To date the common EC2 instance used for running UrbanFootprint has been a "m3.2
 Access to the repository
 ________________________
 You will need to create a free bitbucket account at http://bitbucket.org
-After creating the account you will need to request access to the repository from Evan Babb.
+After creating the account you will need to request access to the repository from Calthorpe Analytics.
 
 Using Amazon
 ____________
@@ -209,7 +209,7 @@ When prompted for a client, enter "sacog" to set up to use the demonstration dat
 
 If the installation pauses on:
 :: 
-  git log -n 1 --color=never --pretty=oneline
+  git rev-list HEAD --max-count=1 --pretty --oneline
   
 Press "q" to continue.
 
@@ -297,7 +297,7 @@ This concludes the primary installation of UrbanFootprint.
 Step 8: Transfer base data to server
 ____________________________________
 
-For simplicity let's put the data wthat we'll load into urbanfootprint in either home folders for either the "Calthorpe" user or the "Ubuntu" user. If you're already logged in as Calthorpe, I suggest option 2 as the most direct route to get the sample data onto the machine. Option 1 will put the data into the Ubuntu home folder most easily.
+For simplicity let's put the data that we'll load into urbanfootprint in either home folders for either the "Calthorpe" user or the "Ubuntu" user. If you're already logged in as Calthorpe, I suggest option 2 as the most direct route to get the sample data onto the machine. Option 1 will put the data into the Ubuntu home folder most easily.
 
 **Option 1:**
 
