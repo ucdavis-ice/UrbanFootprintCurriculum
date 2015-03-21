@@ -464,10 +464,7 @@ If an error is generated that looks like:
 
 It is safe to ignore.
 
-Run this to clear the database for use:
-::
-  dropdb urbanfootprint
-  
+
 Do the data import and system setup. (takes 30min+)
 ::
   fab amazon_local build:prod
