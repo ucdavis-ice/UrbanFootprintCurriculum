@@ -295,27 +295,7 @@ MXD equations are applied to calculate the likelihood of internal capture, pedes
 **Results**
 The reduction factors from the MXD equations are applied to the maximum trip generation rates.
 
-Fleet Mix
-_________
-
-Because the fleet mix is anticipated and mandated to change over time an additional model component is used to allow the representation of vehicle fleet turnover based on a set of user input assumptions.
-
-In many ways this process works similarly to that of building turnover used in the Energy and Water consumption.
-
-There is an initial vehicle fleet that reduces in size as vehicles are replace. And there is a new vehicle fleet made up of both replacement vehicles and vehicles that are part of any assumed net growth in the fleet.
-
-Five vehicle types are represented in the fleet:
-
-* Internal Combustion (Gasoline)
-* Internal Combustion (Diesel)
-* Plug-in Hybrid Electric Vehicles (PHEV)
-* Battery Electric Vehicles (BEV)
-* Other Zero Emission (Fuel Cell)
-
-Each of these vehicle types has an emissions profile that is tracked based on its age. Initial settings were derived from the CARB's VISION model and scenarios, but is adaptable to other input assumptions. Using per capita vehicle ownership assumptions assigned to place and regions. 
-
-An excel with a prototype version of the methods is available at: :download:`Download <OtherDocs/UF_Fleet_Mix_Module _Dec_20_2012.xlsm>` (note: this excel has a macro embedded so some security software may block it)
-
+Fuel use is calculated based on a fixed fleet efficiency rate based.
 
 
 Household Costs
