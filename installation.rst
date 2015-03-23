@@ -2,7 +2,9 @@
 Installation
 ============
 
-To install UrbanFootprint install these steps.
+To install UrbanFootprint install these steps. 
+
+**Note:** UrbanFootprint is currently under active development. Very soon you'll be able to get an UrbanFootprint instance up and running on your own using these instructions with provided demo data. Contact `Calthorpe Analytics <mailto:UFupdate@calthorpe.com>`_ if you'd like to be notified when that is available, and in the meantime check out the live demo site. 
 
 Document Conventions
 --------------------
@@ -33,8 +35,7 @@ To date the common EC2 instance used for running UrbanFootprint has been a "m3.2
 
 Access to the repository
 ________________________
-You will need to create a free bitbucket account at http://bitbucket.org
-After creating the account you will need to request access to the repository from Calthorpe Analytics.
+See the note at the beginning of this page. Currently the code is under active development, so contact `Calthorpe Analytics <mailto:UFupdate@calthorpe.com>`_ if you'd like to be notified when that is available.
 
 Using Amazon
 ____________
