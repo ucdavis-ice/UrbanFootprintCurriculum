@@ -777,11 +777,15 @@ Clear Base Condition and Redevelopment Flag
 Clear Base Condition
 
   If selected this removes any prior place type from the parcel.
-  If this is not selected, new place types are applied only to the developable portion of the parcel’s area
+  If this is not selected, new place types are applied only to the portion of the parcel’s areas set in the Development Percent box. 
+  
+**Example:**
+
+.. image:: graphics/RedevMode.svg
   
 Redevelopment Flag
 
-  Manually flag a parcel as having been redeveloped.
+  Manually flag a parcel as having been redeveloped. This control is specific to the version of UrbanFootprint with customizations for SACOG.
 
 Applying Land Use
 +++++++++++++++++
