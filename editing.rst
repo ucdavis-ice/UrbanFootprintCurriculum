@@ -833,10 +833,10 @@ What will your priorities be? How much population will you add? How many new job
 
 * Yolo County:
 
- * Copy Scenario A 
- * Add ~14,000 Population
- * Add ~5,500 Dwelling Units
- * Add ~2,000 Jobs
+Add 60k residents.
 
+Specify how you're going to house them, and where and how they're going to work.
+
+Yolo county currently has just over 200,000 residents, 75,500 dwelling units, 90,000 jobs.
 
 
