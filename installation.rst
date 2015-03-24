@@ -4,7 +4,7 @@ Installation
 
 To install UrbanFootprint install these steps. 
 
-**Note:** UrbanFootprint is currently under active development. Very soon you'll be able to get an UrbanFootprint instance up and running on your own using these instructions with provided demo data. Contact `Calthorpe Analytics <mailto:UFupdate@calthorpe.com>`_ if you'd like to be notified when that is available, and in the meantime check out the live demo site. 
+**Note:** UrbanFootprint is currently under active development. Very soon you'll be able to get an UrbanFootprint instance up and running on your own using these instructions with provided demo data. Contact `Calthorpe Analytics <mailto:UFupdate@calthorpe.com>`_ if you'd like to be notified when that is available, and in the meantime contact `Nathaniel Roth <mailto:neroth@ucdavis.edu>`_ for access to a demo site. 
 
 Document Conventions
 --------------------
@@ -31,11 +31,13 @@ ___________________
 
 There are no set system requirements and performance has not been tested across a wide variety of hardware.
 
-To date the common EC2 instance used for running UrbanFootprint has been a "m3.2xlarge" instance. These have 8 avaliable CPUs, 30GB of memory, and 2 80GB SSD storage drives associated with them by default as of 11/14/2014.
+To date the common EC2 instance used for running UrbanFootprint has been a "m3.2xlarge" instance. These have 8 available CPUs, 30GB of memory, and 2 80GB SSD storage drives associated with them by default as of 11/14/2014.
 
 Access to the repository
 ________________________
-See the note at the beginning of this page. Currently the code is under active development, so contact `Calthorpe Analytics <mailto:UFupdate@calthorpe.com>`_ if you'd like to be notified when that is available.
+The code is under active development, contact `Calthorpe Analytics <mailto:UFupdate@calthorpe.com>`_ if you'd like to be notified when the code is publicly available. 
+
+*Note: As of 3/23/2015, we expect to have the code up and available through a publicly accessible repository in the next week or so.
 
 Using Amazon
 ____________
@@ -180,7 +182,7 @@ If you type:
 ::
   ls
 
-You will now see an additional item listed in the "home" folder of the account you're logged in with called "urbanfootprint." It will probably be blue text (in PuTTY) indicatign that it is actually a folder.
+You will now see an additional item listed in the "home" folder of the account you're logged in with called "urbanfootprint." It will probably be blue text (in PuTTY) indicating that it is actually a folder.
 
 
 Step 4: Run the installation script
@@ -238,7 +240,7 @@ You'll be able to tell that this worked if you see your command line looking som
 ::
   calthorpe@....$
 
-Activate the Python virtual envronment that UrbanFootprint will run in.
+Activate the Python virtual environment that UrbanFootprint will run in.
 ::
   source /srv/calthorpe_env/bin/activate
   
@@ -321,7 +323,7 @@ Then use the "curl" tool to download the database dump file.
 Step 9: Create a staging database
 _________________________________
 
-Switch your user name to the calthorpe user and activate the virtual environment that UrbanFootprint runs in. You will need to do activate the virtual environment any time you're making changes to UrbanFootprint's configuration from the commandline.
+Switch your user name to the calthorpe user and activate the virtual environment that UrbanFootprint runs in. You will need to do activate the virtual environment any time you're making changes to UrbanFootprint's configuration from the command line.
 
 if you don't see the start of the command prompt looking like:
 ::
@@ -444,12 +446,12 @@ Specify the client name and settings (takes about 2min.)
 ::
   fab amazon_local client:sacog
 
-*Note: Tilestache will show an error message if the spatial data has not been loaded previouisly.*
+*Note: Tilestache will show an error message if the spatial data has not been loaded previously.*
 
 Import the staging database settings (takes about 2min.)
 ::
   fab amazon_local local_settings:stage
-*Note: Tilestache will show an error message if the spatial data has not been loaded previouisly.*
+*Note: Tilestache will show an error message if the spatial data has not been loaded previously.*
 
 Do a code update. This is an abbreviated version of the installation that we did earlier. (takes about 2 min.)
 
