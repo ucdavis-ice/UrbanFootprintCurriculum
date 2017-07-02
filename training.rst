@@ -141,3 +141,8 @@ Analysis Modules :ref:`Link <analysismods>` :download:`PPT <OtherDocs/UF_Analysi
 1:00 hour:
 Hands on experience
 
+Other Training Materials
+------------------------
+
+PowerPoints and other materials from the UrbanFootprint training offered June 27-28 at UC Davis.
+:download:`Zip <OtherDocs/UrbanFootprint_2017.zip>`

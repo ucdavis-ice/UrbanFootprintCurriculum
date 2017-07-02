@@ -17,3 +17,9 @@ Information Center for the Environment, UC Davis: http://ice.ucdavis.edu
 Documentation
 -------------
 TechnicalDocumentation for UrbanFootprint version 1 (February 2013) :download:`Download <OtherDocs/UrbanFootprintTechnicalDocumentationVersion1.0.pdf>`
+
+Other Training Materials
+------------------------
+
+PowerPoints and other materials from the UrbanFootprint training offered June 27-28 at UC Davis.
+:download:`Zip <OtherDocs/UrbanFootprint_2017.zip>`
